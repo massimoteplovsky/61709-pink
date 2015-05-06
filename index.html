@@ -1,17 +1,160 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-  <meta charset="utf-8">
-  <title>HTML Academy: pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+	<meta charset="UTF-8">
+	<title>index</title>
 </head>
-
 <body>
-
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
-
-  <!-- <script src="js/script.js"></script> -->
-
+	<header class="page-header">
+        <!-- Mobile menu section is not visible in default -->
+        <div class="page-header__wrap">
+            <div class="page-header__logo">
+            	<a class="page-header__logo-link" href="#">PINK</a>
+        	</div>
+        	<nav class="main-nav">
+            	<ul class="main-nav__list">
+              		<li><a href="#">Информация</a></li>
+              		<li><a href="#">Возможности</a></li>
+              		<li><a href="#">Отзывы</a></li>
+              		<li><a href="#">Стоимость</a></li>
+            	</ul>
+            	<a href="#" class="main-nav__toggle"></a>
+        	</nav>
+        </div>
+        <div class="page-header__promo-block">
+        	<a href="#" class="page-header__download-btn">Скачать приложение</a>
+        	<div class="page-header__operation-system-section">
+        		<img src="#" class="page-header__ios-img" alt="ios">
+            	<img src="#" class="page-header__android-img" alt="android">
+            	<img src="#" class="page-header__ios-windows"  alt="windows">
+            	<p class="page-header__operation-system-availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        	</div>
+      	</div>
+	</header>
+	<div class="main-content">
+		<div class="product-ad">
+			<div class="product-ad__suggestion">
+				<p class="product-ad__question">Устали от серости мегаполиса?</p>
+				<p lass="product-ad__answer">Нам есть, что вам предложить!</p>
+			</div>
+			<div class="product-ad__advantages">
+				<div class="product-ad__advantage-block">
+					<h2 class="product-ad__title">Поднимает настроение</h2>
+					<p class="product-ad__description">Приложение позволит вам победить осеннюю
+					 хандру и деперессию буквально в несколько кликов!</p>
+				</div>
+				<div class="product-ad__advantage-block">
+					<h2 class="product-ad__title">Меняет мир вокруг</h2>
+					<p class="product-ad__description">Сделайте снимок и украсьте его смайликом или
+					 текстовой подписью, чтобы усилить эффект</p>
+				</div>
+				<div class="product-ad__advantage-block">
+					<h2 class="product-ad__title">Заводит новых друзей</h2>
+					<p class="product-ad__description">Ставьте лайки, комментируте, делитесь 
+					фотографиями с друзьями и заводите новых</p>
+				</div>
+			</div>
+		</div>
+		<div class="comments-section">
+			<div class="comments-section__comment-wrap">
+				<h2 class="comments-section__title">Николай Петров</h2>
+				<p class="comments-section__comment">
+				 «Это приложение перевернуло мой мир и позволило по-новому
+				 взглянуть на привычные серые вещи! А еще я познакомился 
+				 со своей будущей женой в комментариях к выложенной фотографии!»
+				</p>
+			</div>
+			<div class="comments-section__comment-wrap">
+				<h2 class="comments-section__title">Василий Зайцев</h2>
+				<p class="comments-section__comment">
+				 «Это приложение перевернуло мой мир и позволило по-новому
+				 взглянуть на привычные серые вещи! А еще я познакомился 
+				 со своей будущей женой в комментариях к выложенной фотографии!»
+				</p>
+			</div>
+			<div class="comments-section__comment-wrap">
+				<h2 class="comments-section__title">Дмитрий Кузин</h2>
+				<p class="comments-section__comment">
+				 «Это приложение перевернуло мой мир и позволило по-новому
+				 взглянуть на привычные серые вещи! А еще я познакомился 
+				 со своей будущей женой в комментариях к выложенной фотографии!»
+				</p>
+			</div>
+			<div class="comments-section__bullets-block">
+				<i class="comments-section__active-bullet">&bull;</i>
+				<i>&bull;</i>
+				<i>&bull;</i>
+			</div>
+		</div>
+		<div class="tariff-section">
+			<div class="tariff-section__minimal-block-wrap">
+				<div class="tariff-section__name-block">
+					<div class="tariff-section__hit-flag"></div>
+					<h2 class="tariff-section__full-name">Минимальный</h2>
+					<p class="tariff-section__price">1,99 USD</p>
+				</div>
+				<div class="tariff-section__features">
+					<ul class="tariff-section__features-list">
+						<li class="tariff-section__filter">Розовый фильтр</li>
+						<li class="tariff-section__smiles">Смайлики</li>
+						<li class="tariff-section__comments">Комментарии</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tariff-section__standard-block-wrap">
+				<div class="tariff-section__name-block">
+					<div class="tariff-section__hit-flag"></div>
+					<h2 class="tariff-section__full-name">Стандарт</h2>
+					<p class="tariff-section__price">3,99 USD</p>
+				</div>
+				<div class="tariff-section__features">
+					<ul class="tariff-section__features-list">
+						<li class="tariff-section__filter">Розовый фильтр</li>
+						<li class="tariff-section__smiles">Смайлики</li>
+						<li class="tariff-section__comments">Комментарии</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tariff-section__maximal-block-wrap">
+				<div class="tariff-section__name-block">
+					<div class="tariff-section__hit-flag"></div>
+					<h2 class="tariff-section__full-name">Максимальный</h2>
+					<p class="tariff-section__price">4,99 USD</p>
+				</div>
+				<div class="tariff-section__features">
+					<ul class="tariff-section__features-list">
+						<li class="tariff-section__filter">Розовый фильтр</li>
+						<li class="tariff-section__smiles">Смайлики</li>
+						<li class="tariff-section__comments">Комментарии</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tariff-section__bullets-block">
+				<i>&bull;</i>
+				<i>&bull;</i>
+				<i>&bull;</i>
+			</div>
+		</div>
+	</div>
+	<footer class="page-footer">
+		<h2 class="page-footer__title">Остались вопросы? Свяжитесь с нами!</h2>
+		<div class="page-footer__contacts-block">
+			<div class="page-footer__phone-section">
+				<p class="page-footer__phone-subtitle">Звоните:</p>
+				<p class="page-footer__phone-number">+7 (812) 555-66-66</p>
+			</div>
+			<div class="page-footer__mail-section">
+				<p class="page-footer__mail-subtitle">Пишите:</p>
+				<p class="page-footer__mail">mail@htmlacademy.ru</p>
+			</div>
+			<div class="page-footer__adress-section">
+				<p class="page-footer__adress-subtitle">Приезжайте в гости:</p>
+				<p class="page-footer__adress">ул. Большая Конюшенная, 19/8</p>
+			</div>
+		</div>
+		<div class="page-footer__map-wrap">
+			<div id="page-footer__yandex-map"></div>
+		</div>
+	</footer>
 </body>
 </html>
