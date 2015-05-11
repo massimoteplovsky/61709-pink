@@ -1,0 +1,21 @@
+// colors
+
+$bg-color1: #1D2631; //dark-blue
+$bg-color2: #FFFFFF; //white
+$bg-color3: #F2F2F2; //grey
+
+// font
+
+$f-size: 14px;
+$f-base: "Open Sans", Verdana, sans-serif;
+
+$f-color1: #FFFFFF; //white
+$f-color2: #283645; //dark-blue
+$f-color3: #000000; //black
+
+
+@mixin prefixfree ($property-name, $value...) {
+	-webkit-#{$property-name}: $value;
+	-moz-#{$property-name}: $value;
+	$property-name: $value;
+}
