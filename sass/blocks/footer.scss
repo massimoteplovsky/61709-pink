@@ -1,0 +1,30 @@
+.page-footer{
+	padding-top: 50px;
+
+	&__title{
+		margin-bottom: 50px;
+		font-size: 1.7em;
+		text-align: center;
+		color: $f-color2;
+	}
+
+	&__contacts-title{
+		margin-bottom: 15px;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-align: center;
+		color: $f-color2;
+	}
+
+	&__contacts-details{
+		margin-bottom: 35px;
+		font-size: 1.7em;
+		text-align: center;
+		color: #D53A64;
+	}
+
+	&__yandex-map{
+		height: 200px;
+		background: url("../img/bg-map.jpg");
+	}
+}

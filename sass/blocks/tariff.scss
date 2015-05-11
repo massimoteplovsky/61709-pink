@@ -1,0 +1,52 @@
+.tariff{
+	padding-top: 65px;
+	overflow: hidden;
+	background: $bg-color3;
+
+	&__container{
+		width: 960px;
+		float: left;
+		background: $bg-color2;
+	}
+
+	&__block{
+		width: 320px;
+		float: left;
+	}
+
+	&__name-block{
+		padding: 25px 20px;
+		background: $bg-color1;
+	}
+
+	&__full-name{
+		text-align: center;
+		color: $f-color1;
+	}
+
+	&__price{
+		text-align: center;
+		color: $f-color1;
+	}
+
+	&__features-list{
+		li{
+			padding: 0 20px;
+			color: $bg-color2;
+			line-height: 60px;
+			color: $f-color2;
+			border-bottom: 3px solid #E5E5E5;
+		}
+
+		span{
+			display: block;
+			border-right: 3px solid #E5E5E5;
+			border-left: 3px solid #E5E5E5;
+		}
+	}
+
+	&__bullets-block{
+		float: left;
+		padding: 40px 0;
+	}
+}
