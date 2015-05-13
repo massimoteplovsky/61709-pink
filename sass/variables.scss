@@ -3,6 +3,7 @@
 $bg-color1: #1D2631; //dark-blue
 $bg-color2: #FFFFFF; //white
 $bg-color3: #F2F2F2; //grey
+$borders: #E5E5E5; //light grey
 
 // font
 
@@ -12,6 +13,7 @@ $f-base: "Open Sans", Verdana, sans-serif;
 $f-color1: #FFFFFF; //white
 $f-color2: #283645; //dark-blue
 $f-color3: #000000; //black
+$f-color4: #D22856; //red
 
 
 @mixin prefixfree ($property-name, $value...) {
