@@ -1,15 +1,17 @@
 .post{
-	padding-top: 45px;
+	padding: 0 20px;
 	
 	&__intro{
-		margin-bottom: 35px;
+		padding-top: 45px;
+		padding-bottom: 60px;
 		text-align: center;
-		border: 1px solid $borders;
+		border-bottom: 1px solid $borders;
 	}
 
 	&__title{
 		margin-bottom: 35px;
-		font-size: 2.1429em;	
+		font-size: 2.1429em;
+		line-height: 36px;	
 	}
 
 	&__publish-date{
@@ -19,15 +21,95 @@
 	}
 
 	&__story{
+		padding-top: 35px;
+		padding-bottom: 75px;
 
 		h2{
 			margin-bottom: 45px;
 			font-size: 1.2857em;
-			text-align: center;
+			text-transform: uppercase;
 		}
 
 		p{
 			margin-bottom: 45px;
+
+			a{
+				text-decoration: underline;
+				color: $f-color4;
+			}
+
 		}
+		
+		ul{
+			margin: 50px 0;
+
+			li{
+				position: relative;
+				margin-bottom: 45px;
+				padding-left: 20px;
+
+				&:before{
+					content:"";
+					position: absolute;
+					top: 6px;
+					left: 0;
+					display: block;
+					border: 3px solid $red-border;
+					@include prefixfree(border-radius, 50px);
+				}
+			}
+		}
+
+		blockquote{
+			margin-bottom: 45px;
+			padding-right: 20px;
+			padding-left: 20px; 
+			line-height: $lh-base + .7129;
+			border-left: 2px solid $red-border;
+
+			cite{
+				display: block;
+				font-style: italic;
+				color: #8A8A8A;
+			}
+		}
+
+	}
+
+	&__btn-section-list{
+
+		li{
+			float: left;
+		}
+	}
+	
+	&__btn-section-prev,
+	&__btn-section-next{
+		display: block;
+		width: 130px;
+		margin-bottom: 20px;
+		font-size: $f-size + 4;
+		font-weight: bold;
+		color: $f-color3;
+		text-transform: uppercase;
+		line-height: 60px;
+		text-align: center;
+		border: 3px solid $borders;
+	}
+	
+	&__btn-section-prev{
+		margin-right: 20px;
+	}
+
+	&__btn-section-back-to-list{
+		display: block;
+		width: 280px;
+		font-size: $f-size + 4;
+		font-weight: bold;
+		color: $f-color3;
+		text-transform: uppercase;
+		line-height: 60px;
+		text-align: center;
+		border: 3px solid $borders;
 	}
 }
