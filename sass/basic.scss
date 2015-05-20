@@ -5,6 +5,7 @@
 body{
   font-family: $f-base;
   font-size: $f-size;
+  font-weight: normal;
   color: $f-color2;
 }
 
@@ -14,10 +15,15 @@ a{
 
 .clearfix{
   display: table;
+  width: 100%;
   clear: both;
 }
 
 .page-wrapper{
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: 480px){
+  	width: 700px;
+  }
 }
