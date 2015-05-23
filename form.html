@@ -2,282 +2,161 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-<<<<<<< HEAD
-	<title>Pink-form-mobile</title>
-</head>
-<body>
-	<header class="primary-header">
-		<!-- Mobile menu section is not visible in default -->
-		<div class="mobile-menu">
-			<nav>
-				<ul>
-					<li><a href="index.html">PINK</a><a href="#"><img src="#" alt="slide-menu-close"></a></li>
-					<li><a href="#">Информация</a></li>
-					<li><a href="#">Возможности</a></li>
-					<li><a href="#">Отзывы</a></li>
-					<li><a href="#">Стоимость</a></li>
-				</ul>
-			</nav>
-		</div>
-		<div class="main-header">
-			<div class="logo">
-				<a href="#">PINK</a>
-			</div>
-			<div class="slide-menu">
-				<a href="#"><img src="#" alt="slide-menu"></a>
-			</div>
-		</div>
-		<h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
-	</header>
-	<div class="main-content">
-		<p>
-			Поделитесь своей историей и получите шанс выиграть ценный приз 
-			— 1000 миль на вашу бонусную карту!
-		</p>
-		<form action="#" method="post">
-			<div class="personal-data">
-				<div>
-					<label for="firstname">Имя:*</label>
-					<input type="text" id="firstname" name="firstname" placeholder="Введите ваше имя">
-				</div>
-				<div>
-					<label for="lastname">Фамилия:*</label>
-					<input type="text" id="lastdname" name="lastname" placeholder="Укажите фамилию">
-				</div>
-				<div>
-					<label for="middlename">Отчество:*</label>
-					<input type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
-				</div>
-			</div>
-			<div class="application">
-				<div><input type="radio" id="ios" name="application" checked><label for="ios">Pink для iOS</label></div>
-				<div><input type="radio" id="android" name="application"><label for="android">Pink для Android</label></div>
-				<div><input type="radio" id="windows" name="application"><label for="windows">Pink на Windows</label></div>
-			</div>
-			<div class="travel-date">
-				<p>Когды вы путешествовали?*</p>
-				<div>
-					<input type="text" placeholder="1 апреля 2015">
-					<label>Дата выезда</label>
-				</div>
-				<div>
-					<input type="text" placeholder="10 дней" disabled>
-					<label>Продолжительность</label>
-				</div>
-				<div>
-					<input type="text" disabled>
-					<label>Дата возвращения</label>
-				</div>
-			</div>
-			<div class="companion">
-				<label>Количество попутчиков*</label>
-				<input type="text" placeholder="2чел" disabled>
-				<div class="companion-section">
-					<label>Имя*</label>
-					<input type="text" placeholder="Введите ваше имя">
-					<label>Прозвище:</label>
-					<input type="text" placeholder="Ну как же без этого!">
-				</div>
-				<div class="companion-section">
-					<label>Имя*</label>
-					<input type="text" placeholder="Введите ваше имя">
-					<label>Прозвище:</label>
-					<input type="text" placeholder="Ну как же без этого!">
-				</div>
-			</div>
-			<div class="achievements">
-				<p>Ваши безбашенные достижения в путешествии</p>
-				<div>
-					<input type="checkbox" id="selfy" name="achievements" checked>
-					<label for="selfy">Сделал селфи с акулой</label>
-				</div>
-				<div>
-					<input type="checkbox" id="beach" name="achievements" checked>
-					<label for="beach">Обгорел на пляже</label>
-				</div>
-				<div>
-					<input type="checkbox" id="norris" name="achievements">
-					<label for="norris">Видел Чака Норриса</label>
-				</div>
-				<div>
-					<input type="checkbox" id="souvenir" name="achievements">
-					<label for="souvenir">Накупил сувениров</label>
-				</div>
-				<div>
-					<input type="checkbox" id="tower" name="achievements" checked>
-					<label for="tower">Удержал башню</label>
-				</div>
-				<div>
-=======
 	<title>Pink-form</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="page-header">
-		<div class="page-header__wrap">
-            <div class="page-header__logo">
-            	<a class="page-header__logo-link" href="#">PINK</a>
-        	</div>
-        	<nav class="main-nav">
-            	<ul class="main-nav__list">
-              		<li><a href="#">Информация</a></li>
-              		<li><a href="#">Возможности</a></li>
-              		<li><a href="#">Отзывы</a></li>
-              		<li><a href="#">Стоимость</a></li>
-            	</ul>
-            	<a href="#" class="main-nav__toggle"></a>
-        	</nav>
-        </div>
-		<h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
-	</header>
-	<div class="main-content">
-		<form class="page-form" action="#" method="post">
-			<p class="page-form__description">
-				Поделитесь своей историей и получите шанс выиграть ценный приз 
-				— 1000 миль на вашу бонусную карту!
-			</p>
-			<div class="page-form__personal-data-section">
-				<div class="page-form__firstname-block">
-					<label class="page-form__firstname-label" for="firstname">Имя:*</label>
-					<input class="page-form__firstname-field" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя">
+	<div class="page-wrapper">
+		<header class="page-header">
+			<div class="page-header__wrap clearfix">
+	            <div class="page-header__logo">
+	            	<a class="page-header__logo-link" href="#">PINK</a>
+	        	</div>
+	        	<nav class="main-nav">
+	            	<ul class="main-nav__list">
+	              		<li><a href="#">Информация</a></li>
+	              		<li><a href="#">Возможности</a></li>
+	              		<li><a href="#">Отзывы</a></li>
+	              		<li><a href="#">Стоимость</a></li>
+	            	</ul>
+	            	<a href="#" class="main-nav__toggle">MENU</a>
+	        	</nav>
+	        </div>
+			<h2 class="page-header__title">Конкурс на самое безбашеное путешествие с Пинк</h2>
+		</header>
+		<div class="main-content">
+			<form class="page-form" action="#" method="post">
+				<p class="page-form__description">
+					Поделитесь своей историей и получите шанс выиграть ценный приз 
+					— 1000 миль на вашу бонусную карту!
+				</p>
+				<div class="page-form__personal-data-section">
+					<div class="page-form__firstname-block">
+						<label class="page-form__firstname-label" for="firstname">Имя:*</label>
+						<input class="page-form__firstname-field" type="text" id="firstname" name="firstname" placeholder="Введите ваше имя">
+					</div>
+					<div class="page-form__lastname-block">
+						<label class="page-form__lastname-label" for="lastname">Фамилия:*</label>
+						<input class="page-form__lastname-field" type="text" id="lastdname" name="lastname" placeholder="Укажите фамилию">
+					</div>
+					<div class="page-form__middlename-block">
+						<label class="page-form__middlename-label" for="middlename">Отчество:*</label>
+						<input class="page-form__middlename-field" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
+					</div>
 				</div>
-				<div class="page-form__lastname-block">
-					<label class="page-form__lastname-label" for="lastname">Фамилия:*</label>
-					<input class="page-form__lastname-field" type="text" id="lastdname" name="lastname" placeholder="Укажите фамилию">
+				<div class="page-form__application-section">
+					<p class="page-form__application-title">С каким приложением путешествовали*</p>
+					<div>
+						<input class="page-form__ios-radio" type="radio" id="ios" name="application" checked>
+						<label class="page-form__ios-label" for="ios">Pink для iOS</label>
+					</div>
+					<div>
+						<input class="page-form__android-radio" type="radio" id="android" name="application">
+						<label class="page-form__android-label" for="android">Pink для Android</label>
+					</div>
+					<div>
+						<input class="page-form__windows-radio" type="radio" id="windows" name="application">
+						<label class="page-form__windows-label" for="windows">Pink на Windows</label>
+					</div>
 				</div>
-				<div class="page-form__middlename-block">
-					<label class="page-form__middlename-label" for="middlename">Отчество:*</label>
-					<input class="page-form__middlename-field" type="text" id="middlename" name="middlename" placeholder="Ну и отчество тоже">
+				<div class="page-form__travel-section">
+					<p class="page-form__travel-title">Когды вы путешествовали?*</p>
+					<div class="page-form__depature-date-block">
+						<input class="page-form__depature-date-field" type="text" placeholder="1 апреля 2015">
+						<label class="page-form__depature-date-label">Дата выезда</label>
+					</div>
+					<div class="page-form__travel-duration-block">
+						<input class="page-form__duration-field" type="text" placeholder="10 дней">
+						<label class="page-form__duration-label">Продолжительность</label>
+					</div>
+					<div class="page-form__arrival-date">
+						<input class="page-form__arrival-date-field" type="text" placeholder="1 апреля 2015" disabled>
+						<label class="page-form__arrival-date-label">Дата возвращения</label>
+					</div>
 				</div>
-			</div>
-			<div class="page-form__application-section">
-				<div class="page-form__ios-block">
-					<input class="page-form__ios-radio" type="radio" id="ios" name="application" checked>
-					<label class="page-form__ios-label" for="ios">Pink для iOS</label>
+				<div class="page-form__companion-section">
+					<div class="page-form__companion-number">
+						<label class="page-form__companion-title">Количество попутчиков*</label>
+						<div class="page-form__companion-counter">
+							<span class="page-form__companion-plus">+</span>
+							<input class="page-form__companion-number-field" type="text" placeholder="2 чел" disabled>
+							<span class="page-form__companion-minus">-</span>
+						</div>
+					</div>
+					<div class="page-form__companion-block">
+						<label class="page-form__companion-name-label">Имя*</label>
+						<span>1</span>
+						<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+						<label class="page-form__companion-nickname-label">Прозвище:</label>
+						<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+					</div>
+					<div class="page-form__companion-block">
+						<label class="page-form__companion-name-label">Имя*</label>
+						<span>2</span>
+						<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+						<label class="page-form__companion-nickname-label">Прозвище:</label>
+						<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+					</div>
 				</div>
-				<div>
-					<input class="page-form__android-radio" type="radio" id="android" name="application">
-					<label class="page-form__android-label" for="android">Pink для Android</label>
+				<div class="page-form__achievements">
+					<p class="page-form__achievements-title">Ваши безбашенные достижения в путешествии</p>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="selfy" name="achievements" checked>
+						<label for="selfy">Сделал селфи с акулой</label>
+					</div>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="beach" name="achievements" checked>
+						<label for="beach">Обгорел на пляже</label>
+					</div>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="norris" name="achievements">
+						<label for="norris">Видел Чака Норриса</label>
+					</div>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="souvenir" name="achievements">
+						<label for="souvenir">Накупил сувениров</label>
+					</div>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="tower" name="achievements" checked>
+						<label for="tower">Удержал башню</label>
+					</div>
+					<div class="page-form__achievement-block">
+						<input type="checkbox" id="hotel" name="achievements">
+						<label for="hotel">Разгромил отель</label>
+					</div>
 				</div>
-				<div>
-					<input class="page-form__windows-radio" type="radio" id="windows" name="application">
-					<label class="page-form__windows-label" for="windows">Pink на Windows</label>
+				<div class="page-form__photos-section">
+					<div class="page-form__download-block">
+						<p class="page-form__download-title">Ваши фотографии из поездки*</p>
+						<a class="page-form__download-btn" href="#">Загрузить фото</a>
+					</div>
+					<div class="page-form__photos-block">
+						<figure><img src="img/img1.jpg" height="68" width="68" alt="city-1"><figcaption>img-1</figcaption></figure>
+						<figure><img src="img/img2.jpg" height="68" width="68" alt="city-2"><figcaption>img-2</figcaption></figure>
+						<figure><img src="img/img3.jpg" height="68" width="68" alt="city-3"><figcaption>img-3</figcaption></figure>
+						<figure><img src="img/img4.jpg" height="68" width="68" alt="city-4"><figcaption>img-4</figcaption></figure>
+						<figure><img src="img/img5.jpg" height="68" width="68" alt="city-5"><figcaption>img-5</figcaption></figure>
+						<figure><img src="img/img6.jpg" height="68" width="68" alt="city-6"><figcaption>img-6</figcaption></figure>
+						<figure><img src="img/img7.jpg" height="68" width="68" alt="city-7"><figcaption>img-7</figcaption></figure>
+						<figure><img src="img/img8.jpg" height="68" width="68" alt="city-8"><figcaption>img-8</figcaption></figure>
+					</div>
 				</div>
-			</div>
-			<div class="page-form__travel-section">
-				<p class="page-form__travel-title">Когды вы путешествовали?*</p>
-				<div class="page-form__depature-date-block">
-					<input class="page-form__depature-date-field" type="text" placeholder="1 апреля 2015">
-					<label class="page-form__depature-date-label">Дата выезда</label>
-				</div>
-				<div class="page-form__travel-duration-block">
-					<input class="page-form__duration-field" type="text" placeholder="10 дней" disabled>
-					<label class="page-form__duration-label">Продолжительность</label>
-				</div>
-				<div class="page-form__arrival-date">
-					<input class="page-form__arrival-date-field" type="text" disabled>
-					<label class="page-form__arrival-date-label">Дата возвращения</label>
-				</div>
-			</div>
-			<div class="page-form__companion-section">
-				<div class="page-form__companion-number">
-					<label class="page-form__companion-number-label">Количество попутчиков*</label>
-					<input class="page-form__companion-number-field" type="text" placeholder="2чел" disabled>
-				</div>
-				<div class="page-form__companion-block">
-					<label class="page-form__companion-name-label">Имя*</label>
-					<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
-					<label class="page-form__companion-nickname-label">Прозвище:</label>
-					<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
-				</div>
-				<div class="page-form__companion-block">
-					<label class="page-form__companion-name-label">Имя*</label>
-					<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
-					<label class="page-form__companion-nickname-label">Прозвище:</label>
-					<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
-				</div>
-			</div>
-			<div class="page-form__achievements-section">
-				<p class="page-form__achievements-title">Ваши безбашенные достижения в путешествии</p>
-				<div class="page-form__achievement-block">
-					<input type="checkbox" id="selfy" name="achievements" checked>
-					<label for="selfy">Сделал селфи с акулой</label>
-				</div>
-				<div class="page-form__achievement-block">
-					<input type="checkbox" id="beach" name="achievements" checked>
-					<label for="beach">Обгорел на пляже</label>
-				</div>
-				<div class="page-form__achievement-block">
-					<input type="checkbox" id="norris" name="achievements">
-					<label for="norris">Видел Чака Норриса</label>
-				</div>
-				<div class="page-form__achievement-block">
-					<input type="checkbox" id="souvenir" name="achievements">
-					<label for="souvenir">Накупил сувениров</label>
-				</div>
-				<div class="page-form__achievement-block">
-					<input type="checkbox" id="tower" name="achievements" checked>
-					<label for="tower">Удержал башню</label>
-				</div>
-				<div class="page-form__achievement-block">
->>>>>>> pr/3
-					<input type="checkbox" id="hotel" name="achievements">
-					<label for="hotel">Разгромил отель</label>
-				</div>
-			</div>
-<<<<<<< HEAD
-			<div class="photos-section">
-				<div class="download">
-					<p>Ваши фотографии из поездки*</p>
-					<a href="#">Загрузить</a>
-				</div>
-				<div class="photos">
-=======
-			<div class="page-form__photos-section">
-				<div class="page-form__download-block">
-					<p class="page-form__download-title">Ваши фотографии из поездки*</p>
-					<a class="page-form__download-btn" href="#">Загрузить</a>
-				</div>
-				<div class="page-form__photos-block">
->>>>>>> pr/3
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-					<img src="#" alt="">
-				</div>
-			</div>
-<<<<<<< HEAD
-			<button type="submit">Отправить форму</button>
-			<p><span>*</span>-обязательные поля</p>
-		</form>
-	</div>
-	<footer class="primary-footer">
-		<a href="index.html" class="footer-logo">PINK</a>
-		<div class="social-block">
-			<a href="twtter.com">Twitter</a>
-			<a href="facebook.com">Facebook</a>
-			<a href="#">Noname</a>
+				<button class="page-form__send-form-btn" type="submit">Отправить форму</button>
+				<p class="page-form__required-fields"><span>*</span>-обязательные поля</p>
+			</form>
 		</div>
-		<div class="developer">Разработано <a href="htmlacademy.ru">HTMLacademy</a></div>
-=======
-			<button class="page-form__send-form-btn" type="submit">Отправить форму</button>
-			<p class="page-form__required-fields"><span>*</span>-обязательные поля</p>
-		</form>
+		<footer class="page-footer">
+			<a href="index.html" class="page-footer__logo-link"><img src="img/icon-footer-logo.png" height="40" width="145" alt=""></a>
+			<div class="page-footer__social-block">
+				<ul class="page-footer__social-list">
+					<li><a href="twtter.com" class="page-footer__social-twiiter-link">Twitter</a></li>
+					<li><a href="facebook.com" class="page-footer__social-facebook-link">Facebook</a></li>
+					<li><a href="#" class="page-footer__social__noname-link">Noname</a></li>
+				</ul>	
+			</div>
+			<div class="page-footer__developer">Разработано <a href="htmlacademy.ru" class="page-footer__htmlacademy-link">HTMLacademy</a></div>
+		</footer>
 	</div>
-	<footer class="page-footer">
-		<a href="index.html" class="page-footer__logo-link">PINK</a>
-		<div class="social-block">
-			<ul class="social-block__list">
-				<li><a href="twtter.com" class="social-block__twitter-link">Twitter</a></li>
-				<li><a href="facebook.com" class="social-block__facebook-link">Facebook</a></li>
-				<li><a href="#" class="social-block__noname-link">Noname</a></li>
-			</ul>	
-		</div>
-		<div class="page-footer__developer">Разработано <a class="page-footer__htmlacademy-link" href="htmlacademy.ru">HTMLacademy</a></div>
->>>>>>> pr/3
-	</footer>
 </body>
 </html>
