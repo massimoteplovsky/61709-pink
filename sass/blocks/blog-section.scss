@@ -13,13 +13,13 @@
 
 	&__blog-title{
 		margin-bottom: 20px;
-		font-size: 1.2em;
+		font-size: 18px;
 		color: $f-color2;
 	}
 
 	&__publish-date{
 		margin-bottom: 35px;
-		font-size: .8em;
+		font-size: 12px;
 		color: #D53A64;;
 	}
 
@@ -42,8 +42,87 @@
 			margin-left: 5px;
 			line-height: 60px;
 			text-align: center;
-			border: 2px solid #E5E5E5;
+			border: 2px solid $borders;
 		}
 	}
+
+}
+
+@media (min-width: 480px){
+
+	.blog-section{
+
+		padding: 0 40px;
+
+		&__blog-wrap{
+			width: 500px;
+			padding: 50px 0 0 0;
+			margin-left: 60px;
+			border-top: 2px dotted $borders;
+		}
+
+		&__blog-wrap:first-child{
+			border: none;
+		}
+
+		&__blog-title{
+			position: relative;
+			margin-bottom: 20px;
+			font-size: 27px;
+			font-weight: bold;
+			color: $f-color2;
+
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 28px;
+				height: 26px;
+				background: url("../img/icon-comment.svg");
+			}
+		}
+
+		&__publish-date{
+			margin-bottom: 40px;
+			font-size: 1em;
+			color: #D53A64;;
+		}
+
+		&__description{
+			margin-bottom: 50px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+	}
+
+	.pagination {
+			overflow: hidden;
+			margin: 0 0 65px 100px;
+
+			li{
+				float: left;
+				margin-right: 10px;
+				border: 2px solid $borders;
+			}	
+			
+			a{
+				display: block;
+				width: 60px;
+				margin-right: 0px;
+				margin-left: 0px;
+				line-height: 60px;
+				text-align: center;
+				color: $f-color2;
+				
+			}
+
+			
+		}
+
+	li.pagination__list-active{
+				border: 2px solid $red-border; 
+			}	
 
 }

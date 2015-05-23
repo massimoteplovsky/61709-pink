@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="page-wrapper">
-		<header class="page-header">
+		<header class="page-header clearfix">
 	        <div class="page-header__wrap clearfix">
 	            <div class="page-header__logo">
 	            	<a class="page-header__logo-link" href="#">PINK</a>
@@ -39,31 +39,44 @@
 	      	</div>
 		</header>
 		<div class="main-content">
-			<div class="product-ad">
+			<div class="product-ad clearfix">
 				<div class="product-ad__suggestion">
 					<p class="product-ad__suggestion-title">Устали от серости мегаполиса?</p>
 					<p class="product-ad__suggestion-title">Нам есть, что вам предложить!</p>
 				</div>
-				<div class="product-ad__advantages">
-					<div class="product-ad__advantage-block">
-						<h2 class="product-ad__title">Поднимает настроение</h2>
-						<p class="product-ad__description">Приложение позволит вам победить осеннюю
-						 хандру и деперессию буквально в несколько кликов!</p>
-					</div>
-					<div class="product-ad__advantage-block">
-						<h2 class="product-ad__title">Меняет мир вокруг</h2>
-						<p class="product-ad__description">Сделайте снимок и украсьте его смайликом или
-						 текстовой подписью, чтобы усилить эффект</p>
-					</div>
-					<div class="product-ad__advantage-block">
-						<h2 class="product-ad__title">Заводит новых друзей</h2>
-						<p class="product-ad__description">Ставьте лайки, комментируте, делитесь 
-						фотографиями с друзьями и заводите новых</p>
+				<div class="product-ad__advantages-block">
+					<img src="img/iphone.png" height="548" width="268" alt="iphone">
+					<div class="product-ad__advantages">
+						<div class="product-ad__advantage-block">
+							<h2 class="product-ad__title">Поднимает настроение</h2>
+							<p class="product-ad__description">Приложение позволит вам победить осеннюю
+							 хандру и деперессию буквально в несколько кликов!</p>
+						</div>
+						<div class="product-ad__advantage-block">
+							<h2 class="product-ad__title">Меняет мир вокруг</h2>
+							<p class="product-ad__description">Сделайте снимок и украсьте его смайликом или
+							 текстовой подписью, чтобы усилить эффект</p>
+						</div>
+						<div class="product-ad__advantage-block">
+							<h2 class="product-ad__title">Заводит новых друзей</h2>
+							<p class="product-ad__description">Ставьте лайки, комментируте, делитесь 
+							фотографиями с друзьями и заводите новых</p>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="comments-section">
-				<div class="comments-section__container">
+				<div class="comments-section__intro">
+					<h2 class="comments-section__intro-title">Эффект на 24 часа</h2>
+					<p class="comments-section__intro-description">
+						Британские ученые провели исследования
+						и доказали, что положительный эффект
+						от использования приложения длится 
+						целые сутки!
+					</p>
+					<a href="#">Узнать больше об иследовании</a>
+				</div>
+				<div class="comments-section__container clearfix">
 					<div class="comments-section__comment-wrap">
 						<h2 class="comments-section__title">Николай Петров</h2>
 						<p class="comments-section__comment">
@@ -71,6 +84,10 @@
 						 взглянуть на привычные серые вещи! А еще я познакомился 
 						 со своей будущей женой в комментариях к выложенной фотографии!»
 						</p>
+						<div class="comments-section__author">
+							<h2 class="comments-section__second-title">Николай петров</h2>
+							<p>25 лет, водитель трамвая</p>
+						</div>
 					</div>
 					<div class="comments-section__comment-wrap">
 						<h2 class="comments-section__title">Василий Зайцев</h2>
@@ -79,6 +96,10 @@
 						 взглянуть на привычные серые вещи! А еще я познакомился 
 						 со своей будущей женой в комментариях к выложенной фотографии!»
 						</p>
+						<div class="comments-section__author">
+							<h2 class="comments-section__second-title">Василий Зайцев</h2>
+							<p>25 лет, водитель трамвая</p>
+						</div>
 					</div>
 					<div class="comments-section__comment-wrap">
 						<h2 class="comments-section__title">Дмитрий Кузин</h2>
@@ -87,12 +108,16 @@
 						 взглянуть на привычные серые вещи! А еще я познакомился 
 						 со своей будущей женой в комментариях к выложенной фотографии!»
 						</p>
+						<div class="comments-section__author">
+							<h2 class="comments-section__second-title">Дмитрий Кузин</h2>
+							<p>25 лет, водитель трамвая</p>
+						</div>
 					</div>
-					<div class="comments-section__bullets-block">
-						<i class="comments-section__active-bullet"></i>
-						<i></i>
-						<i></i>
-					</div>
+				</div>
+				<div class="comments-section__bullets-block">
+					<i class="comments-section__active-bullet"></i>
+					<i></i>
+					<i></i>
 				</div>
 			</div>
 			<div class="tariff">
@@ -145,6 +170,48 @@
 					<i></i>
 					<i></i>
 				</div>
+				<table class="tariff__table">
+					<thead>
+						<tr>
+							<td class="tariff__table-cell-none"></td>
+							<td>
+								<div class="tariff__table-flag"></div>
+								<p class="tariff__table-name">База</p>
+								<p class="tariff__table-price">1,99 USD</p>
+							</td>
+							<td>
+								<div class="tariff__table-flag flag"></div>
+								<p class="tariff__table-name">Стандарт</p>
+								<p class="tariff__table-price">3,99 USD</p>
+							</td>
+							<td>
+								<div class="tariff__table-flag"></div>
+								<p class="tariff__table-name">Анлим</p>
+								<p class="tariff__table-price">9,99 USD</p>
+							</td>
+						</tr>
+					</thead>
+					<tbody>	
+						<tr>
+							<td class="tariff__option">Розовый фильтр</td>
+							<td class="tariff__option-on"></td>
+							<td class="tariff__option-on"></td>
+							<td class="tariff__option-on"></td>
+						</tr>
+						<tr>
+							<td class="tariff__option">Смайлики</td>
+							<td class="tariff__option-off"></td>
+							<td class="tariff__option-off"></td>
+							<td class="tariff__option-on"></td>
+						</tr>
+						<tr>
+							<td class="tariff__option">Комментарии</td>
+							<td class="tariff__option-off"></td>
+							<td class="tariff__option-off"></td>
+							<td class="tariff__option-off"></td>
+						</tr>
+					</tbody>	
+				</table>
 			</div>
 		</div>
 		<footer class="page-footer clearfix">
@@ -165,6 +232,17 @@
 			</div>
 			<div class="page-footer__map-wrap">
 				<div class="page-footer__yandex-map"></div>
+			</div>
+			<div class="page-footer__footer-block">
+				<a href="index.html" class="page-footer__logo-link">PINK</a>
+				<div class="page-footer__social-block">
+					<ul class="page-footer__social-list">
+						<li><a href="twtter.com" class="page-footer__social-twiiter-link">Twitter</a></li>
+						<li><a href="facebook.com" class="page-footer__social-facebook-link">Facebook</a></li>
+						<li><a href="#" class="page-footer__social__noname-link">Noname</a></li>
+					</ul>	
+				</div>
+				<div class="page-footer__developer">Разработано <a href="htmlacademy.ru" class="page-footer__htmlacademy-link">HTMLacademy</a></div>
 			</div>
 		</footer>
 	</div>
