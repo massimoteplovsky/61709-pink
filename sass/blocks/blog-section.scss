@@ -48,7 +48,7 @@
 
 }
 
-@media (min-width: 480px){
+@media (min-width: 480px) and (max-width: 1200){
 
 	.blog-section{
 
@@ -124,5 +124,93 @@
 	li.pagination__list-active{
 				border: 2px solid $red-border; 
 			}	
-
+	
 }
+
+@media (min-width: 1200px){
+	.blog-section{
+
+		padding: 0 120px;
+
+		&__blog-wrap{
+			width: 820px;
+			padding: 50px 0;
+			margin-left: 70px;
+			border-top: 2px dotted $borders;
+		}
+
+		&__blog-wrap:first-child{
+			border: none;
+		}
+
+		&__blog-title{
+			position: relative;
+			margin-bottom: 20px;
+			font-size: 27px;
+			font-weight: bold;
+			color: $f-color2;
+
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 28px;
+				height: 26px;
+				background: url("../img/icon-comment.svg");
+			}
+		}
+
+		&__publish-date{
+			margin-bottom: 40px;
+			font-size: 1em;
+			color: #D53A64;;
+		}
+
+		&__description{
+			margin-bottom: 50px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+	}
+
+	.pagination {
+			position: relative;
+			float: left;
+			margin: 0 0 65px 190px;
+
+			li{
+				float: left;
+				margin-right: 10px;
+				border: 2px solid $borders;
+			}	
+			
+			a{
+				display: block;
+				width: 60px;
+				margin-right: 0px;
+				margin-left: 0px;
+				line-height: 60px;
+				text-align: center;
+				color: $f-color2;
+				
+			}
+
+			&::before{
+				content: "СТР.";
+				position: absolute;
+				top: 21px;
+				left: -55px;
+				display: block;
+				font-size: $f-size2;
+				color: $f-color2;
+			}
+
+			
+		}
+
+	li.pagination__list-active{
+				border: 2px solid $red-border; 
+			}
+	}		

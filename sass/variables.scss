@@ -2,7 +2,8 @@
 
 $bg-color1: #1D2631; //dark-blue
 $bg-color2: #FFFFFF; //white
-$bg-color3: #F2F2F2; //grey
+$bg-color3: #F2F2F2;
+$bg-color4: #D22856; //grey
 $borders: #E5E5E5; //light grey
 $red-border: #D22856; //red
 
@@ -11,6 +12,7 @@ $red-border: #D22856; //red
 $f-size: 14px;
 $f-size2: 18px; //18px
 $f-size3: 24px;
+$f-size4: 30px;
 $f-base: "Open Sans", Verdana, sans-serif;
 $lh-base: 1.2157em;
 
@@ -21,7 +23,7 @@ $f-color4: #D22856; //red
 
 
 @mixin prefixfree ($property-name, $value...) {
-	-webkit-#{$property-name}: $value;
-	-moz-#{$property-name}: $value;
-	$property-name: $value;
+    -webkit-#{$property-name}: $value;
+	   -moz-#{$property-name}: $value;
+			   $property-name: $value;
 }

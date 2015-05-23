@@ -70,7 +70,7 @@
 	}
 }
 
-@media (min-width: 480px){
+@media (min-width: 480px) and (max-width: 1200){
 
 	.page-footer{
 		padding: 0;
@@ -188,6 +188,142 @@
 		&__developer{
 			display: inline-block;
 			margin-right: -4px;
+			width: 160px;
+			height: 50px;
+			vertical-align: middle;
+
+			
+
+			a{
+				position: relative;
+				top: -7px;
+				display: inline-block;
+				width: 27px;
+				height: 34px;
+				margin-left: 15px;
+				background: url("../img/icon-htmlacademy.png") no-repeat 0 0;
+				text-indent: -9999px;
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: 1200px){
+
+	.page-footer{
+		padding: 0;
+
+
+		&__title{
+			margin: 65px 320px 75px;
+			font-size: 2.8571em;
+			font-weight: 300;
+			text-align: center;
+			color: $f-color2;
+		}
+		
+		&__contacts{
+			display: flex;
+			padding: 0 120px;
+			text-align: center;
+		}
+
+		&__contacts-wrap{
+			flex-direction: column;
+			width: 320px;
+			margin: 0;
+
+			&:last-child{
+				margin: 0;
+			}
+
+			&:nth-child(2){
+				order: 1;
+			}
+		}
+
+		&__contacts-title{
+			margin-bottom: 15px;
+			font-size: $f-size2;
+			font-weight: bold;
+			text-align: center;
+			color: $f-color2;
+		}
+
+		&__contacts-details{
+			margin-bottom: 35px;
+			font-size: 24px;
+			font-weight: 100;
+			text-align: center;
+			color: #D53A64;
+		}
+		
+		&__map-wrap{
+			position: relative;
+		}
+
+		&__yandex-map{
+			height: 430px;
+			background: url("../img/bg-map02.jpg");
+		}
+		
+		&__footer-block{
+			padding: 40px 120px;
+			vertical-align: middle;
+
+		}
+
+		&__logo-link{
+			display: inline-block;
+			float: left;
+			width: 170px;
+			height: 50px;
+			padding: 12px 0 0 40px;
+			font-size: 2.2em;
+			vertical-align: bottom;
+			margin-right: 220px;
+			margin-bottom: 0;
+			background: url("../img/icon-footer-logo.png") no-repeat left top;
+
+			&:hover{
+				color: $f-color4;
+			}
+
+			&:active{
+				opacity: .3;
+			}
+		}
+		
+		&__social-block{
+			display: inline-block;
+			width: 195px;
+			margin-bottom: 0;
+		}
+		
+		&__social-list{
+			text-align: center;
+		}
+
+		&__social-list li{
+			display: inline-block;
+			margin-right: 11px;
+			
+			a{
+				display: block;
+				height: 50px;
+				width: 50px;
+				text-indent: -9999px;
+				border: 2px solid $borders;
+				@include prefixfree(border-radius, 50px);
+			}
+		}
+
+		
+		&__developer{
+			display: inline-block;
+			margin-left: 210px;
 			width: 160px;
 			height: 50px;
 			vertical-align: middle;

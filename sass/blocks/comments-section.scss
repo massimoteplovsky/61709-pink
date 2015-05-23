@@ -1,5 +1,4 @@
 .comments-section{
-	//@include prefixfree (box-sizing, content-box);
 	
 	overflow: hidden;
 	
@@ -30,7 +29,7 @@
 	}
 }
 
-@media (min-width: 480px){
+@media (min-width: 480px) and (max-width: 1200px){
 
 	.comments-section{
 		overflow: hidden;
@@ -114,6 +113,121 @@
 			border: 3px solid #000000;
 			@include prefixfree(border-radius, 50px);
 			background: #FFFFFF;
+		}
+	}
+
+}
+
+@media (min-width: 1200px){
+
+	.comments-section{
+		position: relative;
+		overflow: visible;
+		
+		&__intro-wrap{
+			padding: 100px 120px 115px;
+			background: url("../img/bg-comments-section.jpg") no-repeat 130px 0px $bg-color3;
+			background-size: 300px 345px;
+		}
+
+		&__intro{
+			padding-left: 370px;
+			padding-right: 70px;
+
+			h2{
+				margin-bottom: 30px;
+				padding-right: 170px;
+				font-size: $f-size4;
+				font-weight: bold;
+			}
+
+			p{
+				margin-bottom: 45px;
+				font-size: $f-size2;
+				line-height: 30px;
+			}
+
+			a{
+				text-decoration: underline;
+				color: $f-color4;
+			}
+		}
+
+		&__container{
+			width: 3600px;
+		}
+
+		&__comment-wrap{
+			float: left;
+			width:1200px;
+			padding: 195px 130px 40px;
+
+			p{
+				font-size: $f-size2;
+			}
+		}
+
+		&__title{
+			display: none;
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		&__author{
+			margin-top: 30px;
+			text-align: center;
+
+			h2{
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+		}
+
+		&__comment{
+			padding: 0 125px;
+			line-height: 30px;
+			text-align: center;
+		}
+
+		&__bullets-block{
+			display: none;
+			margin-bottom: 20px;
+			text-align: center;
+
+			i{
+				width: 6px;
+				height: 6px;
+				display: inline-block;
+				@include prefixfree(border-radius, 50px);
+				background: $bg-color3;
+			}
+
+		}
+
+		&__active-bullet{
+			border: 2px solid #000000;
+			@include prefixfree(border-radius, 50px);
+			background: #FFFFFF;
+		}
+
+		&__arrows-control{
+			position: relative;
+			left: 130px;
+			bottom: 160px;
+			width: 940px;
+			height: 42px;
+		}
+
+		&__left-arrow{
+			float: left;
+			width: 40px;
+			height: 40px;
+		}
+
+		&__right-arrow{
+			float: right;
+			width: 40px;
+			height: 40px;
 		}
 	}
 
