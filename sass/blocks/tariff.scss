@@ -30,7 +30,6 @@
 	}
 
 	&__features-list{
-
 		li{
 			padding: 0 20px;
 			color: $bg-color2;
@@ -50,100 +49,4 @@
 		float: left;
 		padding: 40px 0;
 	}
-}
-
-@media (min-width: 480px) {
-
-	.tariff{
-		position: relative;
-		padding: 130px 40px 80px;
-		overflow: hidden;
-		background: $bg-color3;
-
-		&:before{
-			content: "";
-			position: absolute;
-			top: 0px;
-			left: 0;
-			border: 50px solid transparent;
-			border-top: 55px solid #ffffff;
-			border-left: 700px solid #ffffff;
-		}
-
-		&__container{
-			display: none;
-		}
-		
-		&__table{
-			width: 100%;
-			border: 2px solid $borders;
-			
-			thead{
-
-				td{
-					position: relative;
-					padding: 20px;
-					border-color: transparent;
-					background: $bg-color1;
-				}
-
-				td:first-child{
-				background-color: transparent;
-				border-bottom: 2px solid $borders;
-				}
-			}
-
-			td{
-				width: 150px;
-				padding: 15px;
-				border: 2px solid $borders;
-			}
-
-		}
-
-		&__table-cell-none{
-			background-color: transparent;
-		}
-
-		&__table-name{
-			padding-bottom: 15px;
-			font-size: 1.2157em;
-			font-weight: bold;
-			text-align: center;
-			color: $f-color1;
-		}
-
-		&__table-price{
-			font-size: 1.2157em;
-			font-weight: normal;
-			text-align: center;
-			color: $f-color1;
-		}
-
-		&__table-flag{
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 60px;
-			height: 60px;
-		}
-
-		.flag{
-			background: url("../img/hit.png");
-		}
-		
-		&__option{
-			background: $bg-color2;
-		}
-
-		&__option-on{
-			background: $bg-color2 url("../img/yes.png") no-repeat center center;
-		}
-
-		&__option-off{
-			background: $bg-color2 url("../img/no.png") no-repeat center center;
-		}
-
-	}
-
 }
