@@ -3,14 +3,15 @@
 
 	&__title{
 		margin-bottom: 50px;
-		font-size: 1.7em;
+		font-size: $f-size3;
 		text-align: center;
+		line-height: 1.5;
 		color: $f-color2;
 	}
 
 	&__contacts-title{
 		margin-bottom: 15px;
-		font-size: 1.2em;
+		font-size: $f-size2;
 		font-weight: bold;
 		text-align: center;
 		color: $f-color2;
@@ -18,9 +19,9 @@
 
 	&__contacts-details{
 		margin-bottom: 35px;
-		font-size: 1.7em;
+		font-size: $f-size3;
 		text-align: center;
-		color: #D53A64;
+		color: $f-color4;
 	}
 
 	&__yandex-map{
@@ -30,19 +31,49 @@
 	
 	&__logo-link{
 		display: block;
+		width: 147px;
+		height: 41px;
+		margin: 0 auto;
 		text-align: center;
-		margin-bottom: 45px;
+		text-indent: -9999px;
+		margin-bottom: 40px;
+		background: url("../img/logotype-blue-tablet.svg") no-repeat 0 0;
 
-		img{
-			height: 40px;
-			width:145px;
+		&:hover{
+				background: url("../img/logotype-white-tablet-hover.svg") no-repeat;
+			}
+
+		&:active{
+			background: url("../img/logotype-blue-tablet.svg") no-repeat left top;
+			opacity: .3;
 		}
-
 	}
 	
+	&__map-wrap{
+			position: relative;
+		}
+
+		&__yandex-map{
+			height: 200px;
+			background: url("../img/triangle-white-footer.svg") no-repeat center top,
+					    url("../img/map-mobile.jpg") no-repeat center bottom;
+			background-size: 100% 30px, 100%;	
+
+			@media (min-resolution: 1.5dppx) {
+				background: url("../img/triangle-white-footer.svg") no-repeat center top,
+					   		url("../img/map-mobile@2x.jpg") no-repeat center bottom;
+				background-size: 100% 30px, 100%;
+			}	    
+
+		}
+
+	&__footer-block{
+		display: none;
+	}
+
 	&__social-block{
 		overflow: hidden;
-		margin-bottom: 45px;
+		margin-bottom: 40px;
 	}
 	
 	&__social-list{
@@ -61,23 +92,64 @@
 			text-indent: -9999px;
 			border: 2px solid $borders;
 			@include prefixfree(border-radius, 50px);
+
+			&:hover{
+				border: 2px solid $bg-color1;
+			}
+
+			&:active{
+				opacity: .1;
+			}
 		}
 	}
+
+	&__social-twitter-link{
+			background: url("../img/twitter.svg") no-repeat center center;
+		}
+
+		&__social-facebook-link{
+			background: url("../img/facebook.svg") no-repeat center center;
+		}
+
+		&__social-youtube-link{
+			background: url("../img/youtube.svg") no-repeat 18px center;
+		}
 
 	
 	&__developer{
 		text-align: center;
+
+		a{		
+			position: relative;
+			top: -7px;
+			display: inline-block;
+			width: 27px;
+			height: 35px;
+			vertical-align: text-top;
+			margin-left: 15px;
+			margin-bottom: 50px;
+			text-indent: -9999px;
+			background: url("../img/htmlacademy-static.svg") no-repeat 0 0;
+
+			&:hover{
+				background: url("../img/htmlacademy.svg") no-repeat 0 0;
+			}
+
+			&:active{
+				opacity: .3;
+			}
+		}
 	}
 }
 
-@media (min-width: 480px) and (max-width: 1200){
+@media (min-width: 480px) and (max-width: 1200px){
 
 	.page-footer{
 		padding: 0;
 
 
 		&__title{
-			margin: 55px 140px;
+			margin: 55px 115px;
 			font-size: 2.8571em;
 			font-weight: 300;
 			text-align: center;
@@ -90,11 +162,11 @@
 
 		&__contacts-wrap{
 			display: inline-block;
-			margin-right: 50px;
+			margin-right: 34px;
 			margin-left: 50px;
 
 			&:last-child{
-				margin: 0 220px;
+				margin: 0 200px;
 			}
 		}
 
@@ -116,24 +188,18 @@
 		
 		&__map-wrap{
 			position: relative;
-
-			&:before{
-				content: "";
-				position: absolute;
-				top: 0px;
-				left: 0;
-				border: 350px solid transparent;
-				border-top: 70px solid #ffffff;
-			}
 		}
 
 		&__yandex-map{
 			height: 430px;
-			background: url("../img/bg-map02.jpg");
+			background: url("../img/triangle-white-footer.svg") top center no-repeat,
+						url("../img/map-tablet.jpg") no-repeat center -420px;
+			background-size: 100% 55px, cover;
 		}
 		
 		&__footer-block{
-			padding: 40px;
+			display: block;
+			padding: 40px 0;
 			vertical-align: middle;
 
 		}
@@ -148,13 +214,14 @@
 			vertical-align: bottom;
 			margin-right: 56px;
 			margin-bottom: 0;
-			background: url("../img/icon-footer-logo.png") no-repeat left top;
+			background: url("../img/logotype-blue-tablet.svg") no-repeat;
 
 			&:hover{
-				color: $f-color4;
+				background: url("../img/logotype-white-tablet-hover.svg") no-repeat;
 			}
 
 			&:active{
+				background: url("../img/logotype-blue-tablet.svg") no-repeat;
 				opacity: .3;
 			}
 		}
@@ -187,10 +254,11 @@
 		
 		&__developer{
 			display: inline-block;
-			margin-right: -4px;
+			margin-left: 4px;
+			padding-top: 20px;
 			width: 160px;
 			height: 50px;
-			vertical-align: middle;
+			vertical-align: top;
 
 			
 
@@ -201,12 +269,13 @@
 				width: 27px;
 				height: 34px;
 				margin-left: 15px;
-				background: url("../img/icon-htmlacademy.png") no-repeat 0 0;
 				text-indent: -9999px;
 			}
 		}
 
 	}
+
+	
 
 }
 
@@ -217,8 +286,8 @@
 
 
 		&__title{
-			margin: 65px 320px 75px;
-			font-size: 2.8571em;
+			margin: 65px 190px 75px;
+			font-size: 50px;
 			font-weight: 300;
 			text-align: center;
 			color: $f-color2;
@@ -226,7 +295,7 @@
 		
 		&__contacts{
 			display: flex;
-			padding: 0 120px;
+			padding: 0;
 			text-align: center;
 		}
 
@@ -234,6 +303,7 @@
 			flex-direction: column;
 			width: 320px;
 			margin: 0;
+			padding: 0 10px;
 
 			&:last-child{
 				margin: 0;
@@ -265,12 +335,22 @@
 		}
 
 		&__yandex-map{
-			height: 430px;
-			background: url("../img/bg-map02.jpg");
+			height: 520px;
+			background: url("../img/triangle-white-footer.svg") no-repeat center top,
+					    url("../img/map-desktop.jpg") no-repeat center -265px;
+			background-size: 100% 130px, 100% 975px;	
+
+			@media (min-resolution: 1.5dppx) {
+				background: url("../img/triangle-white-footer.svg") no-repeat center top,
+					    	url("../img/map-desktop@2x.jpg") no-repeat center -265px;
+				background-size: 100% 260px ,100% 1950px;
+			}	    
+
 		}
 		
 		&__footer-block{
-			padding: 40px 120px;
+			display: block;
+			padding: 40px 0px;
 			vertical-align: middle;
 
 		}
@@ -278,20 +358,22 @@
 		&__logo-link{
 			display: inline-block;
 			float: left;
-			width: 170px;
+			width: 160px;
 			height: 50px;
 			padding: 12px 0 0 40px;
 			font-size: 2.2em;
 			vertical-align: bottom;
+			text-indent: -9999px;
 			margin-right: 220px;
 			margin-bottom: 0;
-			background: url("../img/icon-footer-logo.png") no-repeat left top;
+			background: url("../img/logotype-blue-desktop.svg") no-repeat left top;
 
 			&:hover{
-				color: $f-color4;
+				background: url("../img/logotype-white-desktop-hover.svg") no-repeat;
 			}
 
 			&:active{
+				background: url("../img/logotype-blue-desktop.svg") no-repeat left top;
 				opacity: .3;
 			}
 		}
@@ -323,23 +405,11 @@
 		
 		&__developer{
 			display: inline-block;
-			margin-left: 210px;
+			margin-left: 201px;
+			padding-top: 20px;
 			width: 160px;
 			height: 50px;
-			vertical-align: middle;
-
-			
-
-			a{
-				position: relative;
-				top: -7px;
-				display: inline-block;
-				width: 27px;
-				height: 34px;
-				margin-left: 15px;
-				background: url("../img/icon-htmlacademy.png") no-repeat 0 0;
-				text-indent: -9999px;
-			}
+			vertical-align: top;
 		}
 
 	}

@@ -1,8 +1,45 @@
 .page-form{
 	
+	.page-wrapper{
+		padding: 0;
+		width: auto;
+	}
+
+	.plus{
+		text-indent: -9999px;
+		background: url("../img/pic/plus.png") no-repeat center center;
+
+		&:hover{
+			border-color: $bg-color1;
+		}
+
+		&:active{
+			border-color: $bg-color1;
+			background: url("../img/pic/plus-white.png") no-repeat center center, $bg-color1;
+		}
+	}
+
+	.minus{
+		text-indent: -9999px;
+		background: url("../img/pic/minus.png") no-repeat center center;
+
+		&:hover{
+			border-color: $bg-color1;
+		}
+
+		&:active{
+			border-color: $bg-color1;
+			background: url("../img/pic/minus-white.png") no-repeat center center, $bg-color1;
+		}
+	}
+
 	label, input{
 		display: block;
 		padding: 0;
+
+		&:focus{
+			outline: none;
+		}
 	}
 
 	&__description{
@@ -12,7 +49,7 @@
 	}
 
 	&__personal-data-section{
-		padding: 0 20px 20px;
+		padding-bottom: 20px;
 
 		div{
 			margin-bottom: 25px;
@@ -35,13 +72,21 @@
 			padding-left: 20px;
 			font-size: $f-size2;
 			line-height: 60px;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 			@include prefixfree(border-radius, 3px);
+
+			&:hover{
+				border-color: $bg-color1;
+			}
+
+			&:active{
+				border-color: $red-border;
+			}
 		}		
 	}		
 
 	&__application-section{
-		padding: 0 20px;
+		padding: 0;
 		float: left;
 		width: 100%;
 		background: $bg-color3;
@@ -64,7 +109,7 @@
 			padding-left: 60px;
 			font-size: $f-size2;
 
-			&::before{
+			&:before{
 				content: "";
 				position: absolute;
 				left: 0;
@@ -72,20 +117,33 @@
 				display: block;
 				width: 40px;
 				height: 40px;
-				border: 3px solid $borders;
+				border: 2px solid $borders;
 				@include prefixfree(border-radius, 50px);
 				background: $bg-color2;
 			}
+
+			&:hover:before{
+					border-color: $bg-color1;
+				}
+
+				&:active:before{
+					border-color: $red-border;
+				}
+				
 		}
 
-		input[type="radio"]:checked ~ label::after{
+		input[type="radio"]:checked ~ label:after{
 			content: "";
 			position: absolute;
-			left: 15px;
-			top: 2px;
+			left: 14px;
+			top: 1px;
 			display: block;
 			border: 8px solid $red-border;
 			@include prefixfree(border-radius, 50px);
+
+			&:hover{
+					border-color: $bg-color2;
+				}
 		}
 	}
 
@@ -106,7 +164,7 @@
 	&__travel-section{
 		float: left;
 		width: 100%;
-		padding: 0 20px 50px;
+		padding-bottom: 50px;
 
 		div{
 			margin-bottom: 25px;
@@ -124,20 +182,58 @@
 			padding-left: 20px;
 			font-size: $f-size2;
 			line-height: 56px;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 			@include prefixfree(border-radius, 3px);
+
+			&:hover:not(.page-form__duration-field){
+				border-color: $bg-color1;
+			}
+
+			&:active:not(.page-form__duration-field){
+				border-color: $red-border;
+			}
 		}
 		
 	}	
+	
+	&__travel-duration-block{
+			
+			span{
+			float: left;
+			display: block;
+			width: 60px;
+			line-height: 56px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: $f-color3;
+			border: 2px solid $borders;
+			background: $bg-color2;
+			cursor: pointer;
+		}
+
+		input{
+			float: left;
+			display: block;
+			width: 160px;
+			padding-left: 0;
+			font-size: $f-size2;
+			text-align: center;
+			text-transform: uppercase;
+			vertical-align: middle;
+			line-height: 56px;
+			border-right: none;
+			border-left: none;
+		}
+		}
 
 	&__duration-field{
 		width: 160px;
+		background-color: #FFFFFF;
 	}
 
 	&__companion-section{
-		float: left;
-		width: 100%;
-		padding: 40px 20px 45px;
+		padding: 40px 0 45px;
 		background: $bg-color3;
 	}
 
@@ -149,25 +245,25 @@
 	}
 
 	&__companion-number{
-		float: left;
 		margin-bottom: 50px;
-		border-bottom: 3px solid $borders;
+		border-bottom: 2px solid $borders;
 	}
 
 	&__companion-counter{
 		float: left;
-		border: 3px solid $borders;
 		margin-bottom: 45px;
+		border: none;
 
 		span{
 			float: left;
 			display: block;
 			width: 60px;
-			line-height: 60px;
+			line-height: 56px;
 			text-align: center;
-			font-size: 3em;
+			font-size: 52px;
 			font-weight: bold;
 			color: $f-color3;
+			border: 2px solid $borders;
 			background: $bg-color2;
 			cursor: pointer;
 		}
@@ -181,16 +277,15 @@
 			text-transform: uppercase;
 			vertical-align: middle;
 			line-height: 56px;
-			border: 3px solid $borders;
-			border-top: none;
-			border-bottom: none;
+			border: 2px solid $borders;
+			border-left: none;
+			border-right: none;
 			background: $bg-color3;
 		}
 	}
 
 	&__companion-block{
-			float: left;
-			width: 100%;
+			
 			margin-bottom: 25px;
 			
 			span{
@@ -241,6 +336,14 @@
 					line-height: 56px;
 					border: 2px solid $borders;
 					@include prefixfree(border-radius, 3px);
+
+					&:hover{
+						border-color: $bg-color1;
+					}
+
+					&:active{
+						border-color: $red-border;
+					}
 				}
 			}
 		
@@ -252,13 +355,14 @@
 
 	&__achievements{
 		
-		float: left;
-		padding: 60px 20px 0;
+		padding-top: 60px;
 	}	
 
 	&__achievements-title{
 			margin-bottom: 55px;
-			font-size: $f-size2;
+			padding: 0 20px;
+			font-size: $f-size;
+			line-height: 18px;
 			text-align: center;
 			text-transform: uppercase;
 			color: $f-color4;
@@ -290,9 +394,17 @@
 				display: block;
 				width: 40px;
 				height: 40px;
-				border: 3px solid $borders;
+				border: 2px solid $borders;
 				@include prefixfree(border-radius, 5px);
 			} 
+
+			&:hover:before{
+				border-color: $bg-color1;
+			}
+
+			&:active:before{
+				border-color: $red-border;
+			}
 
 
 		}
@@ -304,7 +416,7 @@
 			left: 17px;
 			width: 10px;
 			height: 20px;
-			border: 3px solid $red-border;
+			border: 2px solid $red-border;
 			border-left: none;
 			border-top: none;
 			@include prefixfree(transform, rotate(40deg));
@@ -313,9 +425,8 @@
 	}
 
 	&__photos-section{
-		float: left;
-		width: 100%;
-		padding: 0 20px;
+		overflow: hidden;
+		padding: 0;
 		background: $bg-color3;
 	}
 		
@@ -335,14 +446,24 @@
 		width: 100%;
 		margin-bottom: 35px;
 		line-height: 60px;
-		font-weight: normal;
+		font-weight: bold;
 		font-size: $f-size2;
 		color: $f-color2;
 		text-align: center;
 		text-transform: uppercase;
-		border: 3px solid $borders;
+		border: 2px solid $borders;
 		@include prefixfree(border-radius, 5px);
 		background: $bg-color2;
+
+		&:hover{
+			border-color: $bg-color1;
+		}
+
+		&:active{
+			background-color: $bg-color1;
+			border-color: $bg-color1;
+			color: #FFFFFF;
+		}
 	}
 
 	&__photos-block{
@@ -356,20 +477,33 @@
 			margin-right: 36px;
 			margin-bottom: 25px;
 
-
-			&::after{
+			&:after{
 					content: " ";
 					position: absolute;
 					top: -17px;
 					right: -17px;
 					width: 34px;
 					height: 34px;
-					background: url("../img/icon-cross.png");
+					border: 2px solid $borders;
+					@include prefixfree(border-radius, 50px);
+					background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
 					cursor: pointer;
-				}
+
+					}
+
+			&:hover:after{
+				border-color: $bg-color1;
+				background: url("../img/pic/delete-icon-hover.png") no-repeat center center, #FFFFFF;
+			}
+
+			&:active:after{
+				background: url("../img/pic/delete-icon-active.png") no-repeat center center, $bg-color1;
+			}		
+		}	
 			
 
 			img{
+				max-width: 100%;
 				width: 68px;
 				height: 68px;
 				margin-bottom: 10px;
@@ -380,7 +514,7 @@
 			}
 		}	
 		
-	}
+
 	
 	
 
@@ -392,26 +526,56 @@
 		border: none;
 		line-height: 60px;
 		font-size: $f-size2;
-		font-weight: normal;
+		font-weight: bold;
 		text-transform: uppercase;
 		color: $f-color1;
 		@include prefixfree(border-radius, 3px);
 		background: #2AAB6D;
+		cursor: pointer;
+		outline: none;
+
+		&:hover{
+			background: darken(#2AAB6D, 5%);
+		}
+
+		&:active{
+			color: rgba(255, 255, 255, .3);
+		}
+
+	}
+
+	.disabled{
+		background-color: $bg-color4;
 	}
 	
 	&__required-fields{
 		text-align: center;
+		margin-bottom: 65px;
 
 		span{
 			color: $f-color4;
 		}
 	}
+
 }
+
 
 @media (min-width: 480px) and (max-width: 1200px) {
 
 	.page-form{
-		padding: 0 40px 20px;
+		
+		padding-bottom: 20px;
+		
+		&__centrify{
+			padding: 0;
+			width: auto;
+		}
+		
+		.page-wrapper{
+			width: 700px;
+			padding: 0 40px;
+			margin: 0 auto;
+		}
 
 		label, input{
 			display: block;
@@ -458,12 +622,13 @@
 		&__application-section{
 			position: relative;
 			margin-bottom: 65px;
-			padding: 50px 60px 0;
+			padding-top: 50px;
+			padding-left: 60px;
 			float: left;
 			width: 100%;
 			border: 2px solid $borders;
 			background: $bg-color2;
-
+			
 			div{
 				margin-bottom: 55px;
 			}
@@ -540,7 +705,6 @@
 			div{
 				float: left;
 				margin-bottom: 35px;
-				margin-right: 20px;
 			}
 
 			div:last-child{
@@ -564,6 +728,39 @@
 				@include prefixfree(border-radius, 3px);
 			}
 			
+		}
+
+		&__travel-duration-block{
+			margin-left: 20px;
+
+			span{
+			float: left;
+			display: block;
+			width: 60px;
+			line-height: 56px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: $f-color3;
+			border: 2px solid $borders;
+			cursor: pointer;
+		}
+
+		input{
+			float: left;
+			display: block;
+			width: 120px;
+			padding-left: 0;
+			font-size: $f-size2;
+			text-align: center;
+			text-transform: none;
+			vertical-align: middle;
+			line-height: 56px;
+			border-right: none;
+			border-left: none;
+			background: $bg-color3;
+		}
+		
 		}	
 
 		&__duration-field{
@@ -641,6 +838,20 @@
 			line-height: 60px;
 			text-transform: uppercase;
 			background: $bg-color2;
+			cursor: pointer;
+			outline: none;
+
+			&:hover{
+				color: $f-color4;
+				text-decoration: underline;
+			}
+
+			&:active{
+				color: $f-color4;
+				text-decoration: none;
+				opacity: .3;
+			}
+
 		}
 
 		&__companion-block{
@@ -735,6 +946,10 @@
 
 			margin-bottom: 70px;
 			
+			div{
+				margin-bottom: 70px;
+			}
+
 			input,
 			label{
 				display: inline-block;
@@ -757,7 +972,7 @@
 					display: block;
 					width: 40px;
 					height: 40px;
-					border: 3px solid $borders;
+					border: 2px solid $borders;
 					@include prefixfree(border-radius, 5px);
 				} 
 
@@ -771,7 +986,7 @@
 				left: 17px;
 				width: 10px;
 				height: 20px;
-				border: 3px solid $red-border;
+				border: 2px solid $red-border;
 				border-left: none;
 				border-top: none;
 				@include prefixfree(transform, rotate(40deg));
@@ -792,6 +1007,7 @@
 			margin-bottom: 65px;
 			border: 2px solid $borders;
 			background: $bg-color2;
+			overflow: visible;
 		}
 			
 		&__download-block{
@@ -820,7 +1036,7 @@
 			color: $f-color2;
 			text-align: center;
 			text-transform: uppercase;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 			@include prefixfree(border-radius, 5px);
 			background: $bg-color2;
 		}
@@ -829,6 +1045,7 @@
 			width: 500px;
 			padding-top: 50px;
 			padding-bottom: 0;
+			overflow: visible;
 
 			figure{
 				position: relative;
@@ -837,14 +1054,14 @@
 				margin-bottom: 55px;
 
 
-				&::after{
+				&:after{
 						content: " ";
 						position: absolute;
 						top: -17px;
 						right: -17px;
 						width: 55px;
 						height: 55px;
-						background: url("../img/icon-cross.png");
+						background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
 						cursor: pointer;
 					}
 				
@@ -902,7 +1119,19 @@
 @media (min-width: 1200px) {
 
 	.page-form{
-		padding: 0 130px;
+		padding: 0;
+
+		&__centrify{
+			padding: 0;
+			width: auto;
+		}
+		
+		.page-wrapper{
+			width: 1200px;
+			padding: 0 130px;
+			margin: 0 auto;
+		}
+
 
 		label, input{
 			display: block;
@@ -1040,7 +1269,7 @@
 			margin-bottom: 60px;
 			border: 2px solid $borders;
 
-			div{
+			div:not(.page-form__centrify){
 				width: 240px;
 				float: left;
 				margin-bottom: 0;
@@ -1069,6 +1298,38 @@
 				@include prefixfree(border-radius, 3px);
 			}
 			
+		}	
+		
+		&__travel-duration-block{
+			margin-left: 0;
+
+			span{
+			float: left;
+			display: block;
+			width: 60px;
+			line-height: 56px;
+			text-align: center;
+			font-size: 50px;
+			font-weight: bold;
+			color: $f-color3;
+			border: 2px solid $borders;
+			cursor: pointer;
+		}
+
+		input{
+			float: left;
+			display: block;
+			width: 120px;
+			padding-left: 0;
+			font-size: $f-size2;
+			text-align: center;
+			text-transform: none;
+			vertical-align: middle;
+			line-height: 56px;
+			border-right: none;
+			border-left: none;
+		}
+		
 		}	
 
 		&__duration-field{
@@ -1144,7 +1405,20 @@
 			border: none;
 			font-size: $f-size;
 			text-transform: uppercase;
-			background: $bg-color2;
+			cursor: pointer;
+			outline: none;
+			background: none;
+
+			&:hover{
+				color: $f-color4;
+				text-decoration: underline;
+			}
+
+			&:active{
+				color: $f-color4;
+				text-decoration: none;
+				opacity: .3;
+			}
 		}
 
 		&__companion-block{
@@ -1219,7 +1493,7 @@
 			width: 100%;
 			float: left;
 			margin-bottom: 60px;
-			padding: 50px 60px;
+			padding: 55px 60px 15px;
 			border: 2px solid $borders;
 
 		}	
@@ -1268,7 +1542,7 @@
 					display: block;
 					width: 40px;
 					height: 40px;
-					border: 3px solid $borders;
+					border: 2px solid $borders;
 					@include prefixfree(border-radius, 5px);
 				} 
 
@@ -1282,7 +1556,7 @@
 				left: 17px;
 				width: 10px;
 				height: 20px;
-				border: 3px solid $red-border;
+				border: 2px solid $red-border;
 				border-left: none;
 				border-top: none;
 				@include prefixfree(transform, rotate(40deg));
@@ -1303,6 +1577,7 @@
 			margin-bottom: 65px;
 			border: 2px solid $borders;
 			background: $bg-color2;
+			overflow: visible;
 		}
 			
 		&__download-block{
@@ -1348,14 +1623,14 @@
 				margin-bottom: 55px;
 
 
-				&::after{
+				&:after{
 						content: " ";
 						position: absolute;
-						top: -17px;
-						right: -17px;
+						top: -28px;
+						right: -28px;
 						width: 55px;
 						height: 55px;
-						background: url("../img/icon-cross.png");
+						background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
 						cursor: pointer;
 					}
 				

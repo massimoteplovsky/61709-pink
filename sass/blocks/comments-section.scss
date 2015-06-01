@@ -1,57 +1,121 @@
 .comments-section{
-	
+	min-width: 320px;
 	overflow: hidden;
 	
 	&__container{
-		width: 960px;
+		width: 300%;
 	}
 
 	&__comment-wrap{
-		float: left;
-		width:320px;
-		padding: 50px 0;
+		display: inline-block;
+		text-align: center;
+		width: 33%;
+		margin-right: -4px;
+		padding: 50px 20px;
 	}
 
 	&__title{
 		margin-bottom: 30px;
+		font-size: $f-size2;
+		font-weight: bold;
 		text-align: center;
 	}
 
 	&__comment{
 		text-align: center;
+		line-height: 30px;
 	}
 
 	&__bullets-block{
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: 45px;
+		text-align: center;
+		vertical-align: middle;
 
 		i{
 			display: block;
+			width: 12px;
+			height: 12px;
+			display: inline-block;
+			margin-right: 16px;
+			@include prefixfree(border-radius, 50px);
+			border: 3px solid #FFFFFF;
+			background: $borders;
+			cursor: pointer;
+
+				&:hover:not(.comments-section__active-bullet){
+					background: $bg-color1;
+					opacity: .5;
+				}
+
+				&:active:not(.comments-section__active-bullet){
+					background: $borders;
+					opacity: .8;
+				}
 		}
 	}
+	
+	
+
+	&__intro{
+		display: none;
+	}
+
+	&__author{
+		display: none;
+	}
+
+	&__arrows-control{
+		display: none;
+	}
 }
+
+i.comments-section__active-bullet{
+		width: 12px;
+		height: 12px;
+		background: #FFFFFF;
+		border: 3px solid $bg-color1;
+	}
 
 @media (min-width: 480px) and (max-width: 1200px){
 
 	.comments-section{
 		overflow: hidden;
-		background: url("../img/bg-comments-section.jpg") no-repeat 40px 55px;
-		background-size: 262px 302px;
 		
+		&__intro-wrap{
+			display: block;
+			overflow: hidden;
+  			width: 100%;
+			padding: 0px;
+
+		.page-wrapper{	
+			background: url("../img/24-tablet.png") no-repeat 40px 60px;
+
+			@media (min-resolution: 1.5dppx) {
+				background: url("../img/24-tablet@x2.png") no-repeat 40px 60px;
+			}
+		}
+
+	    }
+
 		&__intro{
+			display: block;
 			float: right;
 			width: 310px;
-			padding: 100px 40px 140px 0;
+			padding: 100px 0 140px 20px;
 
 
 			h2{
-				margin-bottom: 30px;
-				padding-right: 170px;
-				font-size: 2.1428em;
-				line-height: 24px;
+				margin-bottom: 15px;
+				padding-right: 95px;
+				font-size: $f-size4;
+				line-height: 36px;
 			}
 
 			p{
-				margin-bottom: 30px;
-				line-height: 1.7em;
+				margin-bottom: 15px;
+				line-height: 24px;
 			}
 
 			a{
@@ -61,13 +125,15 @@
 		}
 
 		&__container{
-			width: 2100px;
+			width: 300%;
 		}
 
 		&__comment-wrap{
-			float: left;
-			width:700px;
-			padding: 50px 40px;
+			display: inline-block;
+			text-align: center;
+			width: 33.33%;
+			margin-right: -4px;
+			padding: 0 40px;
 
 			p{
 				font-size: 18px;
@@ -81,7 +147,9 @@
 		}
 
 		&__author{
+			display: block;
 			margin-top: 30px;
+			margin-bottom: 40px;
 			text-align: center;
 
 			h2{
@@ -91,29 +159,53 @@
 		}
 
 		&__comment{
+			width: 700px;
+			margin: 0 auto;
 			line-height: 2em;
 			text-align: center;
+			padding: 0 25px;
 		}
 
 		&__bullets-block{
-			margin-bottom: 20px;
-			text-align: center;
+		width: 200px;
+		margin: 0 auto;
+		margin-bottom: 45px;
+		text-align: center;
+		vertical-align: middle;
 
 			i{
-				width: 6px;
-				height: 6px;
+				display: block;
+				width: 12px;
+				height: 12px;
 				display: inline-block;
+				margin-right: 16px;
 				@include prefixfree(border-radius, 50px);
+				border: 3px solid #FFFFFF;
 				background: $borders;
+				cursor: pointer;
+
+					&:hover:not(.comments-section__active-bullet){
+						background: $bg-color1;
+						opacity: .5;
+					}
+
+					&:active:not(.comments-section__active-bullet){
+						background: $borders;
+						opacity: .8;
+					}
 			}
-
 		}
 
-		&__active-bullet{
-			border: 3px solid #000000;
-			@include prefixfree(border-radius, 50px);
-			background: #FFFFFF;
+		&__arrows-control{
+			display: none;
 		}
+	}
+
+	i.comments-section__active-bullet{
+		width: 12px;
+		height: 12px;
+		background: #FFFFFF;
+		border: 3px solid $bg-color1;
 	}
 
 }
@@ -122,17 +214,32 @@
 
 	.comments-section{
 		position: relative;
-		overflow: visible;
+		overflow: hidden;
 		
 		&__intro-wrap{
-			padding: 100px 120px 115px;
-			background: url("../img/bg-comments-section.jpg") no-repeat 130px 0px $bg-color3;
-			background-size: 300px 345px;
+			padding: 0 0 45px;
+			background: $bg-color3;
+
+			
+
+			.page-wrapper{
+				background: url("../img/24.png") no-repeat 130px 0px $bg-color3;
+				background-size: 300px 345px;
+
+				@media (min-resolution: 1.5dppx) {
+					background: url("../img/24@2x.png") no-repeat 130px 0px $bg-color3;
+				}
+			}
 		}
 
 		&__intro{
-			padding-left: 370px;
-			padding-right: 70px;
+			  display: block;
+			  float: right;
+			  width: 620px;
+			  margin-top: 80px;
+			  padding-left: 50px;
+			  padding-right: 50px;
+			  padding-bottom: 80px;
 
 			h2{
 				margin-bottom: 30px;
@@ -154,13 +261,15 @@
 		}
 
 		&__container{
-			width: 3600px;
+			width: 300%;
+			overflow: hidden;
 		}
 
 		&__comment-wrap{
-			float: left;
-			width:1200px;
+			display: inline-block;
+			width: 33.33%;
 			padding: 195px 130px 40px;
+			background: url("../img/quotes-grey.svg") no-repeat center 70px;
 
 			p{
 				font-size: $f-size2;
@@ -174,17 +283,21 @@
 		}
 
 		&__author{
+			display: block;
 			margin-top: 30px;
 			text-align: center;
 
 			h2{
+				font-size: $f-size3;
 				margin-bottom: 10px;
 				font-weight: bold;
 			}
 		}
 
 		&__comment{
-			padding: 0 125px;
+			width: 780px;
+			margin: 0 auto;
+			padding: 0 20px;
 			line-height: 30px;
 			text-align: center;
 		}
@@ -199,8 +312,18 @@
 				height: 6px;
 				display: inline-block;
 				@include prefixfree(border-radius, 50px);
-				background: $bg-color3;
-			}
+				background: $borders;
+
+				&:hover{
+					background: $bg-color1;
+					opacity: .5;
+				}
+
+				&:active{
+					background: $borders;
+					opacity: .8;
+				}
+			}	
 
 		}
 
@@ -211,23 +334,49 @@
 		}
 
 		&__arrows-control{
-			position: relative;
-			left: 130px;
-			bottom: 160px;
-			width: 940px;
-			height: 42px;
+			display: block;
+		    position: relative;
+		    left: 50%;
+		    bottom: 190px;
+		    width: 940px;
+		    margin-left: -470px;
+		    height: 42px;
 		}
 
 		&__left-arrow{
 			float: left;
 			width: 40px;
 			height: 40px;
+			text-indent: -9999px;
+			background: url("../img/review-arrow-left.svg") no-repeat;
+			opacity: .3;
+			cursor: pointer;
+
+			&:hover{
+				opacity: 1;
+			}
+
+			&:active{
+				opacity: .1;
+			}
 		}
 
 		&__right-arrow{
 			float: right;
 			width: 40px;
 			height: 40px;
+			text-indent: -9999px;
+			background: url("../img/review-arrow-right.svg") no-repeat;
+			opacity: .3;
+			cursor: pointer;
+
+			&:hover{
+				opacity: 1;
+			}
+
+			&:active{
+				opacity: .1;
+			}
 		}
 	}
 

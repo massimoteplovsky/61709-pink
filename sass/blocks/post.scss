@@ -1,9 +1,9 @@
 .post{
-	padding: 0 20px;
+	padding: 0;
 	
 	&__intro{
 		padding-top: 45px;
-		padding-bottom: 60px;
+		padding-bottom: 30px;
 		text-align: center;
 		border-bottom: 1px solid $borders;
 	}
@@ -16,8 +16,18 @@
 
 	&__publish-date{
 		margin-bottom: 35px;
-		font-size: .8571em;
+		font-size: $f-size - 2;
+		text-transform: uppercase;
 		color: $f-color4;
+	}
+
+	&__description{
+		font-size: $f-size + 2;
+		line-height: 27px;
+	}
+
+	&__publish-date-tablet{
+		display: none;
 	}
 
 	&__story{
@@ -25,13 +35,15 @@
 		padding-bottom: 75px;
 
 		h2{
-			margin-bottom: 45px;
-			font-size: 1.2857em;
+			margin-bottom: 40px;
+			font-size: $f-size2;
 			text-transform: uppercase;
 		}
 
 		p{
 			margin-bottom: 45px;
+			font-size: $f-size - 1;
+			line-height: 27px;
 
 			a{
 				text-decoration: underline;
@@ -75,8 +87,14 @@
 		}
 
 	}
+	
+	&__btn-section{
+		margin-bottom: 60px;
+		float: left;
+	}
 
 	&__btn-section-list{
+		
 
 		li{
 			float: left;
@@ -94,7 +112,7 @@
 		text-transform: uppercase;
 		line-height: 60px;
 		text-align: center;
-		border: 3px solid $borders;
+		border: 2px solid $borders;
 	}
 	
 	&__btn-section-prev{
@@ -110,24 +128,28 @@
 		text-transform: uppercase;
 		line-height: 60px;
 		text-align: center;
-		border: 3px solid $borders;
+		border: 2px solid $borders;
+	}
+
+	&__btn-section-tablet{
+		display: none;
 	}
 }
 
 @media (min-width: 480px) and (max-width: 1200px) {
 
 	.post{
-		padding: 0 40px;
+		padding: 0;
 		
 		&__intro{
-			padding-top: 45px;
-			padding-bottom: 60px;
+			padding-top: 80px;
+			padding-bottom: 55px;
 			text-align: center;
 			border: none;
 		}
 
 		&__title{
-			margin-bottom: 35px;
+			margin-bottom: 50px;
 			font-size: 50px;
 			font-weight: bold;
 			line-height: 60px;	
@@ -135,13 +157,16 @@
 
 		&__publish-date{
 			display: none;
-			margin-bottom: 35px;
-			font-size: $f-size;
-			color: $f-color4;
+		}
+		
+		&__description{
+			margin-bottom: 45px;
+			font-size: $f-size3;
 		}
 
 		&__publish-date-tablet{
 			position: relative;
+			display: block;
 			width: 300px;
 			margin: 0 auto;
 			font-size: $f-size;
@@ -166,12 +191,6 @@
 				right: -160px;
 			}
 		}
-		
-		&__description{
-			font-size: $f-size3;
-			line-height: 40px;
-			padding-bottom: 45px;
-		}
 
 		&__story{
 			padding-top: 35px;
@@ -180,7 +199,9 @@
 			h2{
 				margin-bottom: 40px;
 				font-size: $f-size3;
+				font-weight: bold;
 				text-transform: uppercase;
+				color: #283645;
 			}
 
 			p{
@@ -259,7 +280,7 @@
 			text-transform: uppercase;
 			line-height: 60px;
 			text-align: center;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 		}
 		
 		&__btn-tablet-prev{
@@ -268,6 +289,10 @@
 
 		&__btn-tablet-next{
 			margin-right: 0;
+		}
+		
+		&__btn-section-tablet{
+			display: block;
 		}
 
 		&__btn-tablet-back-to-list{
@@ -280,7 +305,7 @@
 			text-transform: uppercase;
 			line-height: 60px;
 			text-align: center;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 		}
 	}
 
@@ -289,11 +314,11 @@
 @media (min-width: 1200px) {
 
 	.post{
-		padding: 0 190px;
+		padding: 0 60px;
 		
 		&__intro{
 			position: relative;
-			padding-top: 110px;
+			padding-top: 115px;
 			padding-bottom: 5px;
 			text-align: center;
 			border-bottom: 2px dotted $borders;
@@ -303,7 +328,6 @@
 			margin-bottom: 35px;
 			font-size: 50px;
 			font-weight: bold;
-			line-height: 60px;	
 		}
 
 		&__publish-date{
@@ -326,7 +350,7 @@
 		}
 		
 		&__description{
-			font-size: $f-size3;
+			font-size: $f-size3 - 1;
 			line-height: 40px;
 			padding-bottom: 45px;
 		}
@@ -338,6 +362,7 @@
 			h2{
 				margin-bottom: 40px;
 				font-size: $f-size3;
+				font-weight: bold;
 				text-transform: uppercase;
 			}
 
@@ -397,6 +422,10 @@
 		&__btn-section-list{
 			display: none;
 		}
+		
+		&__btn-section-tablet{
+			display: block;
+		}
 
 		&__btn-tablet-list{
 			float: left;
@@ -419,7 +448,7 @@
 			text-transform: uppercase;
 			line-height: 60px;
 			text-align: center;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 		}
 		
 		&__btn-tablet-prev{
@@ -440,7 +469,7 @@
 			text-transform: uppercase;
 			line-height: 60px;
 			text-align: center;
-			border: 3px solid $borders;
+			border: 2px solid $borders;
 		}
 	}
 

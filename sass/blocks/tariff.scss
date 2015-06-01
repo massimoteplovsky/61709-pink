@@ -1,56 +1,151 @@
 .tariff{
-	padding-top: 65px;
+	min-width: 320px;
+	padding-top: 90px;
 	overflow: hidden;
-	background: $bg-color3;
+	background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
+	background-size: 100% 25px;
 
 	&__container{
-		width: 960px;
+		width: 300%;
 		float: left;
 		background: $bg-color2;
 	}
 
 	&__block{
-		width: 320px;
-		float: left;
+		display: inline-block;
+		text-align: center;
+		width: 33.33%;
+		margin-right: -4px;
 	}
 
 	&__name-block{
-		padding: 25px 20px;
+		position: relative;
+		width: 100%;
+		padding: 0 20px;
 		background: $bg-color1;
 	}
 
+	&__hit-flag{
+			position: absolute;
+			top: 0;
+			left: 21px;
+			width: 72px;
+			height: 72px;
+	}
+
+	.flag{
+		background: url("../img/hit-icon.png");
+	}
+
+	&__name-wrap{
+		padding: 25px 0;
+		border-right: 2px solid #E5E5E5;
+		border-left: 2px solid #E5E5E5;
+	}
+
+
 	&__full-name{
+		font-size: $f-size2;
 		text-align: center;
+		text-transform: uppercase;
+		line-height: 30px;
 		color: $f-color1;
 	}
 
 	&__price{
+		font-size: $f-size3;
 		text-align: center;
 		color: $f-color1;
 	}
 
 	&__features-list{
+		float: left;
 
 		li{
+			float: left;
+			width: 100%;
 			padding: 0 20px;
 			color: $bg-color2;
 			line-height: 60px;
 			color: $f-color2;
-			border-bottom: 3px solid #E5E5E5;
+			border-bottom: 2px solid #E5E5E5;
 		}
 
-		span{
-			display: block;
-			border-right: 3px solid #E5E5E5;
-			border-left: 3px solid #E5E5E5;
-		}
+		div{
+			overflow: hidden;
+			border-right: 2px solid #E5E5E5;
+			border-left: 2px solid #E5E5E5;
+
+			span{
+				display: block;
+				float: left;
+				width: 200px;
+				padding-left: 20px;
+				text-align: left;
+				text-transform: uppercase;	
+			}
+
+			i{
+				display: block;
+				float: right;
+				width: 60px;
+				height: 60px;
+			}
+		}	
+	}
+
+	&__features-list-yes{
+		background: url("../img/yes.svg") no-repeat center center;
+	}
+
+	&__features-list-no{
+		background: url("../img/no.svg") no-repeat center center;
 	}
 
 	&__bullets-block{
-		float: left;
-		padding: 40px 0;
+			margin-top: 320px;
+			margin-bottom: 45px;
+			text-align: center;
+
+			i{
+				width: 12px;
+				height: 12px;
+				display: inline-block;
+				margin-right: 16px;
+				border: 3px solid #F2F2F2;
+				@include prefixfree(border-radius, 50px);
+				background: $borders;
+				cursor: pointer;
+
+				&:hover:not(.tariff__active-bullet){
+					background: $bg-color1;
+					opacity: .5;
+				}
+
+				&:active:not(.tariff__active-bullet){
+					background: $borders;
+					opacity: .8;
+				}
+			}
+
+			.tariff__active-bullet{
+				width: 12px;
+				height: 12px;
+				border: 3px solid #000000;
+				@include prefixfree(border-radius, 50px);
+				background: #FFFFFF;
+			}
+
+	}
+
+	
+
+	table{
+		display: none;
 	}
 }
+
+
 
 @media (min-width: 480px) and (max-width: 1200px) {
 
@@ -58,25 +153,19 @@
 		position: relative;
 		padding: 130px 40px 80px;
 		overflow: hidden;
-		background: $bg-color3;
-
-		&:before{
-			content: "";
-			position: absolute;
-			top: 0px;
-			left: 0;
-			border: 50px solid transparent;
-			border-top: 55px solid #ffffff;
-			border-left: 700px solid #ffffff;
-		}
+		background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
 
 		&__container{
 			display: none;
 		}
 		
+		table{
+			display: block;
+		}
+
 		&__table{
+			display: block;
 			width: 100%;
-			border: 2px solid $borders;
 			
 			thead{
 
@@ -129,7 +218,7 @@
 		}
 
 		.flag{
-			background: url("../img/hit.png");
+			background: url("../img/hit-icon-tablet.png");
 		}
 		
 		&__option{
@@ -137,43 +226,41 @@
 		}
 
 		&__option-on{
-			background: $bg-color2 url("../img/yes.png") no-repeat center center;
+			background: $bg-color2 url("../img/yes.svg") no-repeat center center;
 		}
 
 		&__option-off{
-			background: $bg-color2 url("../img/no.png") no-repeat center center;
+			background: $bg-color2 url("../img/no.svg") no-repeat center center;
+		}
+
+		&__bullets-block{
+			display: none;
 		}
 
 	}
+
+		
 
 }
 
 @media (min-width: 1200px) {
 
 	.tariff{
-		position: relative;
 		float: left;
 		width: 100%;
-		padding: 65px 130px 95px;
-		background: $bg-color3;
-
-		&:before{
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			border: 50px solid transparent;
-			border-top: 55px solid #ffffff;
-			border-left: 700px solid #ffffff;
-		}
+		padding: 120px 0 95px;
+		background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
 
 		&__container{
 			display: none;
 		}
 		
+		table{
+			display: block;
+		}
+
 		&__table{
-			width: 100%;
-			border: 2px solid $borders;
+			width: 940px;
 			
 			thead{
 
@@ -191,7 +278,7 @@
 			}
 
 			td{
-				width: 150px;
+				width: 235px;
 				padding: 15px;
 				border: 2px solid $borders;
 			}
@@ -221,12 +308,16 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 60px;
-			height: 60px;
+			width: 74px;
+			height: 73px;
 		}
 
 		.flag{
-			background: url("../img/hit.png");
+			background: url("../img/hit-icon.png") no-repeat top left;
+
+			@media (min-resolution: 1.5dppx) {
+				background: url("../img/hit-icon@x2.png") no-repeat top left;
+			}
 		}
 		
 		&__option{
@@ -234,11 +325,15 @@
 		}
 
 		&__option-on{
-			background: $bg-color2 url("../img/yes.png") no-repeat center center;
+			background: $bg-color2 url("../img/yes.svg") no-repeat center center;
 		}
 
 		&__option-off{
-			background: $bg-color2 url("../img/no.png") no-repeat center center;
+			background: $bg-color2 url("../img/no.svg") no-repeat center center;
+		}
+
+		&__bullets-block{
+			display: none;
 		}
 
 	}

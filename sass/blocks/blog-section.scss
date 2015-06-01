@@ -1,9 +1,9 @@
 .blog-section{
 
-	padding: 0 20px;
+	padding: 0;
 
 	&__blog-wrap{
-		padding: 35px 0;
+		padding: 40px 0;
 		border-top: 1px solid #E5E5E5;
 	}
 
@@ -12,9 +12,10 @@
 	}
 
 	&__blog-title{
-		margin-bottom: 20px;
-		font-size: 18px;
-		color: $f-color2;
+		margin-bottom: 15px;
+		font-size: $f-size2;
+		font-weight: bold;
+		color: #000000;
 	}
 
 	&__publish-date{
@@ -22,42 +23,70 @@
 		font-size: 12px;
 		color: #D53A64;;
 	}
-
-	&__pagination{
-		overflow: hidden;
-		margin-top: 25px;
-	}
 	
-	&__pagination-list{
-		float: left;
-	}
-
-	&__pagination-list{
-		float: left;
-		
-		& a{
-			display: block;
-			width: 60px;
-			margin-right: 5px;
-			margin-left: 5px;
-			line-height: 60px;
-			text-align: center;
-			border: 2px solid $borders;
-		}
+	&__description{
+		line-height: 27px;
 	}
 
 }
 
-@media (min-width: 480px) and (max-width: 1200){
+.pagination {
+	position: relative;
+	margin: 0;
+
+	&:before{
+		content: "СТР.";
+		position: absolute;
+		top: 21px;
+		left: -60px;
+		display: none;
+		font-size: $f-size2;
+		font-weight: bold;
+		color: $f-color2;
+	}
+
+	li{
+		float: left;
+		margin-right: 10px;
+		border: 2px solid $borders;
+				
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:hover{
+			border: 2px solid $red-border; 
+		}
+	}	
+			
+	a{
+		display: block;
+		width: 56px;
+		margin-right: 0px;
+		margin-left: 0px;
+		line-height: 56px;
+		text-align: center;
+		color: $f-color2;
+	}
+}
+
+	li.pagination__list-active{
+		border: 2px solid $red-border; 
+	}
+
+div.page-footer__footer-block{
+	display: block;
+}			
+
+@media (min-width: 480px) and (max-width: 1200px) {
 
 	.blog-section{
 
-		padding: 0 40px;
+		padding: 50px 60px 0;
 
 		&__blog-wrap{
-			width: 500px;
-			padding: 50px 0 0 0;
-			margin-left: 60px;
+			padding: 50px 0;
+			padding-bottom: 0;
 			border-top: 2px dotted $borders;
 		}
 
@@ -72,70 +101,56 @@
 			font-weight: bold;
 			color: $f-color2;
 
-			&::before{
+			&:before{
 				content: "";
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 5px;
+				left: -60px;
+				display: block;
 				width: 28px;
 				height: 26px;
-				background: url("../img/icon-comment.svg");
+				background: url("../img/post-icon.svg");
 			}
 		}
 
 		&__publish-date{
 			margin-bottom: 40px;
-			font-size: 1em;
-			color: #D53A64;;
+			font-size: $f-size;
+			color: #D53A64;
 		}
 
 		&__description{
 			margin-bottom: 50px;
-			font-size: 18px;
+			font-size: $f-size2;
 			line-height: 30px;
 		}
 
-	}
-
-	.pagination {
-			overflow: hidden;
-			margin: 0 0 65px 100px;
-
-			li{
-				float: left;
-				margin-right: 10px;
-				border: 2px solid $borders;
-			}	
-			
-			a{
-				display: block;
-				width: 60px;
-				margin-right: 0px;
-				margin-left: 0px;
-				line-height: 60px;
-				text-align: center;
-				color: $f-color2;
-				
-			}
-
-			
-		}
-
-	li.pagination__list-active{
-				border: 2px solid $red-border; 
-			}	
+	}	
 	
+}
+
+.pagination{
+	margin-left: 60px; 
+
+	&:before{
+		content: "СТР.";
+		position: absolute;
+		top: 21px;
+		left: -60px;
+		display: block;
+		font-size: $f-size2;
+		font-weight: bold;
+		color: $f-color2;
+	}
 }
 
 @media (min-width: 1200px){
 	.blog-section{
 
-		padding: 0 120px;
+		padding: 50px 60px 0;
 
 		&__blog-wrap{
-			width: 820px;
 			padding: 50px 0;
-			margin-left: 70px;
 			border-top: 2px dotted $borders;
 		}
 
@@ -150,14 +165,14 @@
 			font-weight: bold;
 			color: $f-color2;
 
-			&::before{
+			&:before{
 				content: "";
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 5px;
+				left: -50px;
 				width: 28px;
 				height: 26px;
-				background: url("../img/icon-comment.svg");
+				background: url("../img/post-icon.svg");
 			}
 		}
 
@@ -175,42 +190,18 @@
 
 	}
 
-	.pagination {
-			position: relative;
-			float: left;
-			margin: 0 0 65px 190px;
+	.pagination{
+		margin-left: 60px; 
 
-			li{
-				float: left;
-				margin-right: 10px;
-				border: 2px solid $borders;
-			}	
-			
-			a{
-				display: block;
-				width: 60px;
-				margin-right: 0px;
-				margin-left: 0px;
-				line-height: 60px;
-				text-align: center;
-				color: $f-color2;
-				
-			}
-
-			&::before{
-				content: "СТР.";
-				position: absolute;
-				top: 21px;
-				left: -55px;
-				display: block;
-				font-size: $f-size2;
-				color: $f-color2;
-			}
-
-			
+		&:before{
+			content: "СТР.";
+			position: absolute;
+			top: 21px;
+			left: -60px;
+			display: block;
+			font-size: $f-size2;
+			font-weight: bold;
+			color: $f-color2;
 		}
-
-	li.pagination__list-active{
-				border: 2px solid $red-border; 
-			}
-	}		
+	}
+}		
