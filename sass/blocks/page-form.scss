@@ -227,9 +227,11 @@
 		}
 		}
 
-	&__duration-field{
+	input.page-form__duration-field{
 		width: 160px;
 		background-color: #FFFFFF;
+		@include prefixfree(border-radius, 0px);
+		border-radius: 0;
 	}
 
 	&__companion-section{
@@ -763,9 +765,12 @@
 		
 		}	
 
-		&__duration-field{
-			width: 160px;
-		}
+		input.page-form__duration-field{
+		width: 120px;
+		background-color: #FFFFFF;
+		@include prefixfree(border-radius, 0px);
+		border-radius: 0;
+	}
 
 		&__companion-section{
 			position: relative;
@@ -1332,8 +1337,11 @@
 		
 		}	
 
-		&__duration-field{
-			width: 160px;
+		input.page-form__duration-field{
+			width: 120px;
+			background-color: #FFFFFF;
+			@include prefixfree(border-radius, 0px);
+			border-radius: 0;
 		}
 
 		&__companion-section{
@@ -1683,4 +1691,13 @@
 
 	}	
 
+	span.disable{
+		background-color: lighten(#E5E5E5, 5%) !important;
+
+	&:hover{
+		border-color: #E5E5E5 !important;
+	}
 }
+
+}
+

@@ -1967,9 +1967,12 @@ div.page-footer__footer-block {
   line-height: 56px;
   border-right: none;
   border-left: none; }
-.page-form__duration-field {
+.page-form input.page-form__duration-field {
   width: 160px;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0; }
 .page-form__companion-section {
   padding: 40px 0 45px;
   background: #F2F2F2; }
@@ -2342,8 +2345,12 @@ div.page-footer__footer-block {
         border-right: none;
         border-left: none;
         background: #F2F2F2; }
-    .page-form__duration-field {
-      width: 160px; }
+    .page-form input.page-form__duration-field {
+      width: 120px;
+      background-color: #FFFFFF;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0; }
     .page-form__companion-section {
       position: relative;
       float: left;
@@ -2755,8 +2762,12 @@ div.page-footer__footer-block {
         line-height: 56px;
         border-right: none;
         border-left: none; }
-    .page-form__duration-field {
-      width: 160px; }
+    .page-form input.page-form__duration-field {
+      width: 120px;
+      background-color: #FFFFFF;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0; }
     .page-form__companion-section {
       position: relative;
       float: left;
@@ -3013,7 +3024,11 @@ div.page-footer__footer-block {
       font-size: 18px;
       text-align: center; }
       .page-form__required-fields span {
-        color: #D22856; } }
+        color: #D22856; }
+  span.disable {
+    background-color: #f2f2f2 !important; }
+    span.disable:hover {
+      border-color: #E5E5E5 !important; } }
 
 .page-footer {
   padding-top: 50px; }
