@@ -114,6 +114,7 @@
 				margin-right: 16px;
 				border: 3px solid #F2F2F2;
 				@include prefixfree(border-radius, 50px);
+				border-radius: 50px;
 				background: $borders;
 				cursor: pointer;
 
@@ -133,6 +134,7 @@
 				height: 12px;
 				border: 3px solid #000000;
 				@include prefixfree(border-radius, 50px);
+				border-radius: 50px;
 				background: #FFFFFF;
 			}
 
@@ -143,6 +145,10 @@
 	table{
 		display: none;
 	}
+}
+
+.page-footer__footer-block{
+	display: none;
 }
 
 

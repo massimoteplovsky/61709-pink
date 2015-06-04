@@ -2,6 +2,12 @@
 
 (function() {
 
+var crosses = document.querySelectorAll("figure::after");
+
+for( var i = 0; i < crosses.length; i++){
+	alert(crosses[i]);
+}
+
 //numeric fields updating
 
 var elements = document.querySelectorAll(".input-numeric");
@@ -63,38 +69,45 @@ for (var i = 0; i < elements.length; i++) {
 
 // form sending
 
- if (!("FormData" in window)) { 
+if (!("FormData" in window)) { 
 
- return; 
+return; 
 
- } 
+} 
 
- var form = document.querySelector(".page-form"); 
+var form = document.querySelector(".page-form"); 
 
- form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function(event) {
 
- event.preventDefault();
+ 	event.preventDefault();
 
- var data = new FormData(form); 
+	var data = new FormData(form); 
 
- var xhr = new XMLHttpRequest(); 
+	request(data, function(response) { 
 
- xhr.open("post", "http://simonenko.su/academy/echo"); 
+ 		console.log(response); 
 
- xhr.addEventListener("readystatechange", function() {
+ 	});
 
- if (xhr.readyState == 4) {
+}); 
 
- 	console.log(xhr.responseText); 
+function request(data, fn){
 
- }
+	var xhr = new XMLHttpRequest(); 
+	var time = (new Date().getTime());
 
- }); 
+	xhr.open("post", "http://simonenko.su/academy/echo") + time; 
 
- xhr.send(data); 
+ 	xhr.addEventListener("readystatechange", function() {
 
- });
+		if (xhr.readyState == 4) {
 
- 
+ 			fn(xhr.responseText); 
+
+ 		} 
+	});
+
+	xhr.send(data);
+}	
 
 })();

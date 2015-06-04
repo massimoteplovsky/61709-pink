@@ -93,6 +93,7 @@
 		color: $f-color1;
 		border: 3px solid $bg-color2;
 		@include prefixfree(border-radius, 50px);
+		border-radius: 50px;
 
 		&:hover{
 			background: $bg-color2;
@@ -261,7 +262,6 @@
 			font-weight: bold;
 			color: $f-color1;
 			border: 3px solid $bg-color2;
-			@include prefixfree(border-radius, 50px);
 
 			&:hover{
 				background: $bg-color2;

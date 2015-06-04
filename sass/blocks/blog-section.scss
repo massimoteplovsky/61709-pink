@@ -74,9 +74,10 @@
 		border: 2px solid $red-border; 
 	}
 
-div.page-footer__footer-block{
+.page-footer__footer-block{
 	display: block;
-}			
+}	
+
 
 @media (min-width: 480px) and (max-width: 1200px) {
 
@@ -127,7 +128,7 @@ div.page-footer__footer-block{
 
 	}	
 	
-}
+
 
 .pagination{
 	margin-left: 60px; 
@@ -142,6 +143,8 @@ div.page-footer__footer-block{
 		font-weight: bold;
 		color: $f-color2;
 	}
+}
+
 }
 
 @media (min-width: 1200px){

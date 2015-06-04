@@ -57,12 +57,12 @@
 			height: 200px;
 			background: url("../img/triangle-white-footer.svg") no-repeat center top,
 					    url("../img/map-mobile.jpg") no-repeat center bottom;
-			background-size: 100% 30px, 100%;	
+			background-size: 100% 30px, 100% 645px;	
 
 			@media (min-resolution: 1.5dppx) {
 				background: url("../img/triangle-white-footer.svg") no-repeat center top,
 					   		url("../img/map-mobile@2x.jpg") no-repeat center bottom;
-				background-size: 100% 30px, 100%;
+				background-size: 100% 30px, 100% 1290px;
 			}	    
 
 		}
@@ -92,6 +92,7 @@
 			text-indent: -9999px;
 			border: 2px solid $borders;
 			@include prefixfree(border-radius, 50px);
+			border-radius: 50px;
 
 			&:hover{
 				border: 2px solid $bg-color1;
@@ -194,7 +195,13 @@
 			height: 430px;
 			background: url("../img/triangle-white-footer.svg") top center no-repeat,
 						url("../img/map-tablet.jpg") no-repeat center -420px;
-			background-size: 100% 55px, cover;
+			background-size: 100% 55px, 100% 848px;
+
+			@media (min-resolution: 1.5dppx) {
+				background: url("../img/triangle-white-footer.svg") no-repeat center top,
+					   		url("../img/map-tablet@2x.jpg") no-repeat center -840px;
+				background-size: 100% 30px, 100% 1696px;
+			}
 		}
 		
 		&__footer-block{
@@ -274,16 +281,12 @@
 		}
 
 	}
-
-	
-
 }
 
 @media (min-width: 1200px){
 
 	.page-footer{
 		padding: 0;
-
 
 		&__title{
 			margin: 65px 190px 75px;
@@ -342,8 +345,8 @@
 
 			@media (min-resolution: 1.5dppx) {
 				background: url("../img/triangle-white-footer.svg") no-repeat center top,
-					    	url("../img/map-desktop@2x.jpg") no-repeat center -265px;
-				background-size: 100% 260px ,100% 1950px;
+					    	url("../img/map-desktop@2x.jpg") no-repeat center -530px;
+				background-size: 100% 260px , 100% 1950px;
 			}	    
 
 		}
