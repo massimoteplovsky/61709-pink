@@ -150,7 +150,7 @@
 
 
 		&__title{
-			margin: 55px 115px;
+			margin: 55px 110px;
 			font-size: 2.8571em;
 			font-weight: 300;
 			text-align: center;
@@ -164,7 +164,7 @@
 		&__contacts-wrap{
 			display: inline-block;
 			margin-right: 34px;
-			margin-left: 50px;
+			margin-left: 35px;
 
 			&:last-child{
 				margin: 0 200px;
@@ -181,8 +181,7 @@
 
 		&__contacts-details{
 			margin-bottom: 35px;
-			font-size: 1.7em;
-			font-weight: 100;
+			font-size: $f-size3;
 			text-align: center;
 			color: #D53A64;
 		}

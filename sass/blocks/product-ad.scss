@@ -59,7 +59,7 @@
 
 		&__suggestion-title{
 			margin-bottom: 10px;
-			font-size: 40px;
+			font-size: 38px;
 			font-weight: 500;
 			text-align: center;
 		}
@@ -140,6 +140,7 @@
 			padding-bottom: 35px;
 			overflow: hidden;
 			background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
+			background-size: 100% 55px;
 			
 			img{
 				display: none;
@@ -170,7 +171,7 @@
 
 		&__title{
 			margin-bottom: 30px;
-			padding: 60px 60px 0;
+			padding: 60px 50px 0;
 			text-align: center;
 			font-size: $f-size3;
 			font-weight: bold;

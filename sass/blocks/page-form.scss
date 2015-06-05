@@ -74,6 +74,7 @@
 			line-height: 60px;
 			border: 2px solid $borders;
 			@include prefixfree(border-radius, 3px);
+			border-radius: 3px;
 
 			&:hover{
 				border-color: $bg-color1;
@@ -119,6 +120,7 @@
 				height: 40px;
 				border: 2px solid $borders;
 				@include prefixfree(border-radius, 50px);
+				border-radius: 50px;
 				background: $bg-color2;
 			}
 
@@ -140,6 +142,7 @@
 			display: block;
 			border: 8px solid $red-border;
 			@include prefixfree(border-radius, 50px);
+			border-radius: 50px;
 
 			&:hover{
 					border-color: $bg-color2;
@@ -184,6 +187,7 @@
 			line-height: 56px;
 			border: 2px solid $borders;
 			@include prefixfree(border-radius, 3px);
+			border-radius: 3px;
 
 			&:hover:not(.page-form__duration-field){
 				border-color: $bg-color1;
@@ -273,7 +277,7 @@
 		input{
 			float: left;
 			display: block;
-			width: 154px;
+			width: 160px;
 			font-size: $f-size2;
 			text-align: center;
 			text-transform: uppercase;
@@ -338,6 +342,7 @@
 					line-height: 56px;
 					border: 2px solid $borders;
 					@include prefixfree(border-radius, 3px);
+					border-radius: 3px;
 
 					&:hover{
 						border-color: $bg-color1;
@@ -398,6 +403,7 @@
 				height: 40px;
 				border: 2px solid $borders;
 				@include prefixfree(border-radius, 5px);
+				border-radius: 5px;
 			} 
 
 			&:hover:before{
@@ -422,6 +428,7 @@
 			border-left: none;
 			border-top: none;
 			@include prefixfree(transform, rotate(40deg));
+			transform: rotate(40deg);
 		} 
 
 	}
@@ -455,6 +462,7 @@
 		text-transform: uppercase;
 		border: 2px solid $borders;
 		@include prefixfree(border-radius, 5px);
+		border-radius: 5px;
 		background: $bg-color2;
 
 		&:hover{
@@ -488,6 +496,7 @@
 					height: 34px;
 					border: 2px solid $borders;
 					@include prefixfree(border-radius, 50px);
+					border-radius: 50px;
 					background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
 					cursor: pointer;
 
@@ -532,6 +541,7 @@
 		text-transform: uppercase;
 		color: $f-color1;
 		@include prefixfree(border-radius, 3px);
+		border-radius: 3px;
 		background: #2AAB6D;
 		cursor: pointer;
 		outline: none;
@@ -1066,8 +1076,8 @@
 				&:after{
 						content: " ";
 						position: absolute;
-						top: -17px;
-						right: -17px;
+						top: -28px;
+						right: -28px;
 						width: 55px;
 						height: 55px;
 						background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
@@ -1201,7 +1211,7 @@
 
 			div{
 				float: left;
-				margin-right: 120px;
+				margin-right: 119px;
 				margin-bottom: 0;
 
 				&:last-child{

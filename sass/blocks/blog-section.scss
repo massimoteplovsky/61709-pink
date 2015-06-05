@@ -32,7 +32,8 @@
 
 .pagination {
 	position: relative;
-	margin: 0;
+	margin-bottom: 40px;
+    float: left;
 
 	&:before{
 		content: "СТР.";

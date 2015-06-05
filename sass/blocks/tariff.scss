@@ -157,9 +157,11 @@
 
 	.tariff{
 		position: relative;
-		padding: 130px 40px 80px;
-		overflow: hidden;
+		padding: 130px 0px 80px;
+		min-width: 700px;
+		overflow: visible;
 		background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
+		background-size: 100% 55px, cover; 
 
 		&__container{
 			display: none;
@@ -256,6 +258,7 @@
 		width: 100%;
 		padding: 120px 0 95px;
 		background: url("../img/triangle-white.svg") top center no-repeat, $bg-color3;
+		background-size: 100% 55px;
 
 		&__container{
 			display: none;
@@ -279,6 +282,7 @@
 
 				td:first-child{
 				background-color: transparent;
+				border-color: transparent;
 				border-bottom: 2px solid $borders;
 				}
 			}
@@ -292,6 +296,7 @@
 		}
 
 		&__table-cell-none{
+
 			background-color: transparent;
 		}
 

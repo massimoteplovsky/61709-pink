@@ -5,8 +5,8 @@
 	background-size: auto;		    
 
 	@media (min-resolution: 1.5dppx) {
-			background: url("../img/iphone-hand-mobile@2x.png") no-repeat 60px 202px,
-			    	    url("../img/background-mobile@1x.jpg") no-repeat top center, $bg-color1;
+			background: url("../img/background-mobile@1x.jpg") no-repeat top center, $bg-color1;
+			background-size: auto;
 			}
 
 	&__wrap{
@@ -135,7 +135,7 @@
 
 	&__title{
 		padding: 45px 0 50px;
-		font-size: $f-size3;
+		font-size: 22px;
 		font-weight: 100;
 		text-align: center;
 		color: $f-color1;
@@ -174,7 +174,11 @@
 		position: relative;
 		color: $f-color1;
 		background: url("../img/background-tablet@1x.jpg") no-repeat top center, $bg-color1;
-		background-size: cover;			
+		background-size: auto;
+
+		@media (min-resolution: 1.5dppx) {
+			background: url("../img/background-tablet@2x.jpg") no-repeat top center, $bg-color1;
+			}			
 
 		&__wrap{
 			width: 100%;
@@ -306,7 +310,7 @@
 
 		&__title{
 			padding: 80px 14px 80px;
-			font-size: 50px;
+			font-size: 47px;
 			line-height: 60px;
 			font-weight: 100;
 			text-align: center;
@@ -352,11 +356,11 @@
 		position: relative;
 		color: $f-color1;
 		background: url("../img/background-fullsize.jpg") top center;	
-		background-size: cover;
+		background-size: 100% 855px;
 
 		@media (min-resolution: 1.5dppx) {
-			background: url("../img/background-fullsize.jpg") center center;	
-			background-size: cover;
+			background: url("../img/background-fullsize.jpg") top center;	
+			background-size: auto;
 			}	
 
 		&__wrap{
@@ -502,7 +506,7 @@
 
 		&__list li{
 			float: left;
-			margin-right: 70px;
+			margin-right: 68px;
 			border: none;
 			background: transparent;
 

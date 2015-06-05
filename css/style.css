@@ -85,7 +85,8 @@ a {
   background-size: auto; }
   @media (min-resolution: 1.5dppx) {
     .page-header {
-      background: url("../img/iphone-hand-mobile@2x.png") no-repeat 60px 202px, url("../img/background-mobile@1x.jpg") no-repeat top center, #1D2631; } }
+      background: url("../img/background-mobile@1x.jpg") no-repeat top center, #1D2631;
+      background-size: auto; } }
   .page-header__wrap {
     padding: 20px 0;
     background: rgba(0, 0, 0, 0.4); }
@@ -167,7 +168,7 @@ a {
     clear: both; }
   .page-header__title {
     padding: 45px 0 50px;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 100;
     text-align: center;
     color: #FFFFFF; }
@@ -196,7 +197,10 @@ a {
     position: relative;
     color: #FFFFFF;
     background: url("../img/background-tablet@1x.jpg") no-repeat top center, #1D2631;
-    background-size: cover; }
+    background-size: auto; }
+    @media (min-resolution: 1.5dppx) {
+      .page-header {
+        background: url("../img/background-tablet@2x.jpg") no-repeat top center, #1D2631; } }
     .page-header__wrap {
       width: 100%;
       padding: 45px 0;
@@ -285,7 +289,7 @@ a {
       clear: both; }
     .page-header__title {
       padding: 80px 14px 80px;
-      font-size: 50px;
+      font-size: 47px;
       line-height: 60px;
       font-weight: 100;
       text-align: center;
@@ -316,11 +320,11 @@ a {
     position: relative;
     color: #FFFFFF;
     background: url("../img/background-fullsize.jpg") top center;
-    background-size: cover; }
+    background-size: 100% 855px; }
     @media (min-resolution: 1.5dppx) {
       .page-header {
-        background: url("../img/background-fullsize.jpg") center center;
-        background-size: cover; } }
+        background: url("../img/background-fullsize.jpg") top center;
+        background-size: auto; } }
     .page-header__wrap {
       width: 100%;
       padding: 30px 0 45px;
@@ -418,7 +422,7 @@ a {
       display: block; }
     .main-nav__list li {
       float: left;
-      margin-right: 70px;
+      margin-right: 68px;
       border: none;
       background: transparent; }
       .main-nav__list li:last-child {
@@ -478,7 +482,7 @@ a {
       background: #FFFFFF; }
     .product-ad__suggestion-title {
       margin-bottom: 10px;
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 500;
       text-align: center; }
     .product-ad__suggestion-title + p {
@@ -528,7 +532,8 @@ a {
       padding: 0;
       padding-bottom: 35px;
       overflow: hidden;
-      background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2; }
+      background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2;
+      background-size: 100% 55px; }
       .product-ad__advantages-block img {
         display: none; }
     .product-ad__advantages {
@@ -547,7 +552,7 @@ a {
         margin: 0 auto; }
     .product-ad__title {
       margin-bottom: 30px;
-      padding: 60px 60px 0;
+      padding: 60px 50px 0;
       text-align: center;
       font-size: 24px;
       font-weight: bold; }
@@ -928,9 +933,11 @@ i.comments-section__active-bullet {
 @media (min-width: 480px) and (max-width: 1200px) {
   .tariff {
     position: relative;
-    padding: 130px 40px 80px;
-    overflow: hidden;
-    background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2; }
+    padding: 130px 0px 80px;
+    min-width: 700px;
+    overflow: visible;
+    background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2;
+    background-size: 100% 55px, cover; }
     .tariff__container {
       display: none; }
     .tariff table {
@@ -985,7 +992,8 @@ i.comments-section__active-bullet {
     float: left;
     width: 100%;
     padding: 120px 0 95px;
-    background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2; }
+    background: url("../img/triangle-white.svg") top center no-repeat, #F2F2F2;
+    background-size: 100% 55px; }
     .tariff__container {
       display: none; }
     .tariff table {
@@ -999,6 +1007,7 @@ i.comments-section__active-bullet {
         background: #1D2631; }
       .tariff__table thead td:first-child {
         background-color: transparent;
+        border-color: transparent;
         border-bottom: 2px solid #E5E5E5; }
       .tariff__table td {
         width: 235px;
@@ -1134,7 +1143,7 @@ i.comments-section__active-bullet {
   .page-footer {
     padding: 0; }
     .page-footer__title {
-      margin: 55px 115px;
+      margin: 55px 110px;
       font-size: 2.8571em;
       font-weight: 300;
       text-align: center;
@@ -1144,7 +1153,7 @@ i.comments-section__active-bullet {
     .page-footer__contacts-wrap {
       display: inline-block;
       margin-right: 34px;
-      margin-left: 50px; }
+      margin-left: 35px; }
       .page-footer__contacts-wrap:last-child {
         margin: 0 200px; }
     .page-footer__contacts-title {
@@ -1155,8 +1164,7 @@ i.comments-section__active-bullet {
       color: #394552; }
     .page-footer__contacts-details {
       margin-bottom: 35px;
-      font-size: 1.7em;
-      font-weight: 100;
+      font-size: 24px;
       text-align: center;
       color: #D53A64; }
     .page-footer__map-wrap {
@@ -1334,7 +1342,8 @@ i.comments-section__active-bullet {
 
 .pagination {
   position: relative;
-  margin: 0; }
+  margin-bottom: 40px;
+  float: left; }
   .pagination:before {
     content: "СТР.";
     position: absolute;
@@ -1823,7 +1832,8 @@ li.pagination__list-active {
   line-height: 60px;
   border: 2px solid #E5E5E5;
   -webkit-border-radius: 3px;
-  -moz-border-radius: 3px; }
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
   .page-form__firstname-block input:hover, .page-form__lastname-block input:hover, .page-form__middlename-block input:hover {
     border-color: #1D2631; }
   .page-form__firstname-block input:active, .page-form__lastname-block input:active, .page-form__middlename-block input:active {
@@ -1854,6 +1864,7 @@ li.pagination__list-active {
       border: 2px solid #E5E5E5;
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
+      border-radius: 50px;
       background: #FFFFFF; }
     .page-form__application-section label:hover:before {
       border-color: #1D2631; }
@@ -1867,7 +1878,8 @@ li.pagination__list-active {
     display: block;
     border: 8px solid #D22856;
     -webkit-border-radius: 50px;
-    -moz-border-radius: 50px; }
+    -moz-border-radius: 50px;
+    border-radius: 50px; }
     .page-form__application-section input[type="radio"]:checked ~ label:after:hover {
       border-color: #FFFFFF; }
 .page-form__application-title {
@@ -1898,7 +1910,8 @@ li.pagination__list-active {
     line-height: 56px;
     border: 2px solid #E5E5E5;
     -webkit-border-radius: 3px;
-    -moz-border-radius: 3px; }
+    -moz-border-radius: 3px;
+    border-radius: 3px; }
     .page-form__travel-section input:hover:not(.page-form__duration-field) {
       border-color: #1D2631; }
     .page-form__travel-section input:active:not(.page-form__duration-field) {
@@ -1963,7 +1976,7 @@ li.pagination__list-active {
   .page-form__companion-counter input {
     float: left;
     display: block;
-    width: 154px;
+    width: 160px;
     font-size: 18px;
     text-align: center;
     text-transform: uppercase;
@@ -2014,7 +2027,8 @@ li.pagination__list-active {
       line-height: 56px;
       border: 2px solid #E5E5E5;
       -webkit-border-radius: 3px;
-      -moz-border-radius: 3px; }
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
       .page-form__companion-block div input:hover {
         border-color: #1D2631; }
       .page-form__companion-block div input:active {
@@ -2051,7 +2065,8 @@ li.pagination__list-active {
       height: 40px;
       border: 2px solid #E5E5E5;
       -webkit-border-radius: 5px;
-      -moz-border-radius: 5px; }
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
     .page-form__achievement-block label:hover:before {
       border-color: #1D2631; }
     .page-form__achievement-block label:active:before {
@@ -2067,7 +2082,8 @@ li.pagination__list-active {
     border-left: none;
     border-top: none;
     -webkit-transform: rotate(40deg);
-    -moz-transform: rotate(40deg); }
+    -moz-transform: rotate(40deg);
+    transform: rotate(40deg); }
 .page-form__photos-section {
   overflow: hidden;
   padding: 0;
@@ -2092,6 +2108,7 @@ li.pagination__list-active {
   border: 2px solid #E5E5E5;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  border-radius: 5px;
   background: #FFFFFF; }
   .page-form__download-btn:hover {
     border-color: #1D2631; }
@@ -2118,6 +2135,7 @@ li.pagination__list-active {
       border: 2px solid #E5E5E5;
       -webkit-border-radius: 50px;
       -moz-border-radius: 50px;
+      border-radius: 50px;
       background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
       cursor: pointer; }
     .page-form__photos-block figure:hover:after {
@@ -2145,6 +2163,7 @@ li.pagination__list-active {
   color: #FFFFFF;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+  border-radius: 3px;
   background: #2AAB6D;
   cursor: pointer;
   outline: none; }
@@ -2534,8 +2553,8 @@ li.pagination__list-active {
         .page-form__photos-block figure:after {
           content: " ";
           position: absolute;
-          top: -17px;
-          right: -17px;
+          top: -28px;
+          right: -28px;
           width: 55px;
           height: 55px;
           background: url("../img/pic/delete-icon.png") no-repeat center center, #FFFFFF;
@@ -2620,7 +2639,7 @@ li.pagination__list-active {
       background: #FFFFFF; }
       .page-form__application-section div {
         float: left;
-        margin-right: 120px;
+        margin-right: 119px;
         margin-bottom: 0; }
         .page-form__application-section div:last-child {
           margin-right: 0; }
