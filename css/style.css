@@ -157,6 +157,8 @@ a {
       float: left;
       margin-right: 20px;
       margin-left: 20px; }
+      .page-header__operation-system-list li a {
+        display: block; }
       .page-header__operation-system-list li img {
         height: 50px;
         width: 50px; }
@@ -275,6 +277,8 @@ a {
         display: inline-block;
         margin-right: 16px;
         margin-left: 16px; }
+        .page-header__operation-system-list li a {
+          display: block; }
         .page-header__operation-system-list li img {
           height: 60px;
           width: 60px; }
@@ -320,7 +324,7 @@ a {
     position: relative;
     color: #FFFFFF;
     background: url("../img/background-fullsize.jpg") top center;
-    background-size: 100% 855px; }
+    background-size: 100% 895px; }
     @media (min-resolution: 1.5dppx) {
       .page-header {
         background: url("../img/background-fullsize.jpg") top center;
@@ -1093,7 +1097,7 @@ i.comments-section__active-bullet {
         background: url("../img/triangle-white-footer.svg") no-repeat center top, url("../img/map-mobile@2x.jpg") no-repeat center bottom;
         background-size: 100% 30px, 100% 1290px; } }
   .page-footer__footer-block {
-    display: none; }
+    padding: 40px 0; }
   .page-footer__social-block {
     overflow: hidden;
     margin-bottom: 40px; }
@@ -2632,7 +2636,7 @@ li.pagination__list-active {
     .page-form__application-section {
       position: relative;
       margin-bottom: 65px;
-      padding: 55px 60px;
+      padding: 0px 60px;
       float: left;
       width: 100%;
       border: 2px solid #E5E5E5;
@@ -2640,7 +2644,8 @@ li.pagination__list-active {
       .page-form__application-section div {
         float: left;
         margin-right: 119px;
-        margin-bottom: 0; }
+        margin-top: 30px;
+        margin-bottom: 30px; }
         .page-form__application-section div:last-child {
           margin-right: 0; }
       .page-form__application-section label, .page-form__application-section input {

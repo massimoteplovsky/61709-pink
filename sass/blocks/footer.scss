@@ -49,8 +49,11 @@
 		}
 	}
 	
+	
+
 	&__map-wrap{
 			position: relative;
+
 		}
 
 		&__yandex-map{
@@ -58,17 +61,17 @@
 			background: url("../img/triangle-white-footer.svg") no-repeat center top,
 					    url("../img/map-mobile.jpg") no-repeat center bottom;
 			background-size: 100% 30px, 100% 645px;	
+		
 
 			@media (min-resolution: 1.5dppx) {
 				background: url("../img/triangle-white-footer.svg") no-repeat center top,
 					   		url("../img/map-mobile@2x.jpg") no-repeat center bottom;
 				background-size: 100% 30px, 100% 1290px;
-			}	    
-
-		}
+			}
+		}	
 
 	&__footer-block{
-		display: none;
+		padding: 40px 0;
 	}
 
 	&__social-block{
