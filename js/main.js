@@ -2,11 +2,23 @@
 
 (function() {
 
-var crosses = document.querySelectorAll("figure::after");
+var toggleLink = document.querySelector(".page-header__toggle");
+var menu = document.querySelector(".main-nav__list");; 
 
-for( var i = 0; i < crosses.length; i++){
-	alert(crosses[i]);
-}
+toggleLink.addEventListener("click", function(event){
+	event.preventDefault();
+	
+	menu.classList.toggle("visible");
+
+	if(menu.classList.contains("visible")){
+		this.classList.remove("page-header__toggle");
+		this.classList.add("page-header__cross")
+	} else {
+		this.classList.add("page-header__toggle");
+		this.classList.remove("page-header__cross");
+	}
+
+});
 
 //numeric fields updating
 

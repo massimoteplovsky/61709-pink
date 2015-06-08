@@ -117,7 +117,22 @@ a {
     .page-header__toggle:hover {
       background: url("../img/menu-burger-hover.svg") no-repeat; }
     .page-header__toggle:active {
+      opacity: .3;
       background: url("../img/menu-burger-hover.svg") no-repeat; }
+  .page-header__cross {
+    display: block;
+    width: 25px;
+    height: 25px;
+    float: right;
+    margin-top: 5px;
+    text-indent: -9999px;
+    background: url("../img/menu-cross.svg") no-repeat;
+    color: #FFFFFF; }
+    .page-header__cross:hover {
+      background: url("../img/menu-cross-hover.svg") no-repeat; }
+    .page-header__cross:active {
+      opacity: .3;
+      background: url("../img/menu-cross-hover.svg") no-repeat; }
   .page-header__promo {
     padding: 0; }
   .page-header .second-background {
@@ -176,6 +191,7 @@ a {
     color: #FFFFFF; }
 
 .main-nav {
+  display: block;
   position: absolute;
   top: 70px;
   left: 0;
@@ -193,16 +209,25 @@ a {
     font-size: 18px;
     color: #FFFFFF;
     text-align: center; }
+    .main-nav__list li a:hover {
+      color: #D22856; }
+    .main-nav__list li a:active {
+      color: #D22856;
+      opacity: .3; }
+
+ul.visible {
+  display: block; }
 
 @media (min-width: 480px) and (max-width: 1200px) {
   .page-header {
     position: relative;
     color: #FFFFFF;
     background: url("../img/background-tablet@1x.jpg") no-repeat top center, #1D2631;
-    background-size: auto; }
+    background-size: auto 817px; }
     @media (min-resolution: 1.5dppx) {
       .page-header {
-        background: url("../img/background-tablet@2x.jpg") no-repeat top center, #1D2631; } }
+        background: url("../img/background-tablet@2x.jpg") no-repeat top center, #1D2631;
+        background-size: auto 817px; } }
     .page-header__wrap {
       width: 100%;
       padding: 45px 0;
@@ -233,8 +258,22 @@ a {
       .page-header__toggle:hover {
         background: url("../img/menu-burger-hover.svg"); }
       .page-header__toggle:active {
-        background: url("../img/menu-burger.svg");
+        background: url("../img/menu-burger-hover.svg");
         opacity: .3; }
+    .page-header__cross {
+      display: block;
+      width: 25px;
+      height: 25px;
+      float: right;
+      margin-top: 16px;
+      text-indent: -9999px;
+      background: url("../img/menu-cross.svg") no-repeat;
+      color: #FFFFFF; }
+      .page-header__cross:hover {
+        background: url("../img/menu-cross-hover.svg") no-repeat; }
+      .page-header__cross:active {
+        opacity: .3;
+        background: url("../img/menu-cross-hover.svg") no-repeat; }
     .page-header .second-background {
       overflow: hidden;
       background: url("../img/iphone-hand-tablet@1x.png") no-repeat -6px bottom; }

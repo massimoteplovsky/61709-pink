@@ -55,7 +55,28 @@
 			}
 
 			&:active{
+				opacity: .3;
 				background: url("../img/menu-burger-hover.svg") no-repeat;
+			}
+	}
+
+	&__cross{
+		display: block;
+		width: 25px;
+		height: 25px;
+		float: right;
+		margin-top: 5px;
+		text-indent: -9999px;
+		background: url("../img/menu-cross.svg") no-repeat;
+		color: $f-color1;
+
+		&:hover{
+			background: url("../img/menu-cross-hover.svg") no-repeat;
+			}
+
+			&:active{
+				opacity: .3;
+				background: url("../img/menu-cross-hover.svg") no-repeat;
 			}
 	}
 	
@@ -147,6 +168,7 @@
 }
 
 .main-nav{
+	display: block;
 	position: absolute;
 	top: 70px;
 	left: 0;
@@ -169,7 +191,20 @@
 		font-size: 18px;
 		color: $f-color1;
 		text-align: center;
+
+		&:hover{
+			color: #D22856;
+		}
+
+		&:active{
+			color: #D22856;
+			opacity: .3;
+		}
 	}
+}
+
+ul.visible{
+	display: block;
 }
 
 @media (min-width: 480px) and (max-width: 1200px) {
@@ -178,10 +213,11 @@
 		position: relative;
 		color: $f-color1;
 		background: url("../img/background-tablet@1x.jpg") no-repeat top center, $bg-color1;
-		background-size: auto;
+		background-size: auto 817px;
 
 		@media (min-resolution: 1.5dppx) {
 			background: url("../img/background-tablet@2x.jpg") no-repeat top center, $bg-color1;
+			background-size: auto 817px;
 			}			
 
 		&__wrap{
@@ -227,10 +263,32 @@
 			}
 
 			&:active{
-				background: url("../img/menu-burger.svg");
+				background: url("../img/menu-burger-hover.svg");
 				opacity: .3;
 			}
 		}
+
+		&__cross{
+		display: block;
+		width: 25px;
+		height: 25px;
+		float: right;
+		margin-top: 16px;
+		text-indent: -9999px;
+		background: url("../img/menu-cross.svg") no-repeat;
+		color: $f-color1;
+
+		&:hover{
+			background: url("../img/menu-cross-hover.svg") no-repeat;
+			}
+
+			&:active{
+				opacity: .3;
+				background: url("../img/menu-cross-hover.svg") no-repeat;
+			}
+	}
+
+		
 
 		.second-background{
 			overflow: hidden;
