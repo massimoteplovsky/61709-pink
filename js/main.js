@@ -23,6 +23,9 @@ toggleLink.addEventListener("click", function(event){
 //numeric fields updating
 
 var elements = document.querySelectorAll(".input-numeric");
+var area = document.querySelector(".page-form__companion-blocks");
+var companion = document.querySelector(".page-form__companion-block");
+var template = document.querySelector("#companion").innerHTML;
 
 for (var i = 0; i < elements.length; i++) {
 
@@ -35,6 +38,7 @@ for (var i = 0; i < elements.length; i++) {
 		var input = parent.querySelector("input");
 		var minus = parent.querySelector(".minus");
 		var plus = parent.querySelector(".plus");
+
 
 		minus.addEventListener("click", function() {
 
@@ -59,6 +63,10 @@ for (var i = 0; i < elements.length; i++) {
 			if (operation) { 
 				minus.classList.remove("disable");
 				input.value = fieldValue + 1; 
+				if(plus.classList.contains("addRemove")){
+					area.innerHTML = area.innerHTML + template;
+				}	
+
 
 			} else { 
 				if(fieldValue <= 1){
@@ -66,6 +74,9 @@ for (var i = 0; i < elements.length; i++) {
 					minus.classList.add("disable");
 				} else{
 			 		input.value = fieldValue - 1; 
+			 		if(minus.classList.contains("addRemove")){
+			 			area.removeChild(companion);
+			 		}
 				}
 
 

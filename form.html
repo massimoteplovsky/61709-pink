@@ -94,34 +94,36 @@
 							<div class="page-form__companion-number">
 								<p class="page-form__companion-title">Количество попутчиков*</p>
 								<div class="page-form__companion-counter input-numeric">
-									<span class="page-form__companion-plus plus">+</span>
+									<span class="page-form__companion-plus plus addRemove">+</span>
 									<input class="page-form__companion-number-field" type="text" value="2" disabled>
-									<span class="page-form__companion-minus minus">-</span>
+									<span class="page-form__companion-minus minus addRemove">-</span>
 								</div>
 							</div>
-							<div class="page-form__companion-block">
-								<span>1</span>
-								<div>
-									<label class="page-form__companion-name-label">Имя*</label>					
-									<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+							<div class="page-form__companion-blocks">
+								<div class="page-form__companion-block">
+									<span>1</span>
+									<div>
+										<label class="page-form__companion-name-label">Имя*</label>					
+										<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+									</div>
+									<div>
+										<label class="page-form__companion-nickname-label">Прозвище:</label>
+										<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+									</div>
+									<button class="page-form__companion-delete">Удалить</button>
 								</div>
-								<div>
-									<label class="page-form__companion-nickname-label">Прозвище:</label>
-									<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+								<div class="page-form__companion-block">
+									<span>2</span>
+									<div>
+										<label class="page-form__companion-name-label">Имя*</label>					
+										<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+									</div>
+									<div>
+										<label class="page-form__companion-nickname-label">Прозвище:</label>
+										<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+									</div>
+									<button class="page-form__companion-delete">Удалить</button>
 								</div>
-								<button class="page-form__companion-delete">Удалить</button>
-							</div>
-							<div class="page-form__companion-block">
-								<span>2</span>
-								<div>
-									<label class="page-form__companion-name-label">Имя*</label>					
-									<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
-								</div>
-								<div>
-									<label class="page-form__companion-nickname-label">Прозвище:</label>
-									<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
-								</div>
-								<button class="page-form__companion-delete">Удалить</button>
 							</div>
 						</div>
 					</div>
@@ -193,6 +195,20 @@
 				<div class="page-footer__developer">Разработано <a href="htmlacademy.ru" class="page-footer__htmlacademy-link">HTMLacademy</a></div>
 		  	</div>
 		</div> 
+	<script id="companion" type="text/html">
+		<div class="page-form__companion-block">
+								<span>1</span>
+								<div>
+									<label class="page-form__companion-name-label">Имя*</label>					
+									<input class="page-form__companion-name-field" type="text" placeholder="Введите ваше имя">
+								</div>
+								<div>
+									<label class="page-form__companion-nickname-label">Прозвище:</label>
+									<input class="page-form__companion-nickname-field" type="text" placeholder="Ну как же без этого!">
+								</div>
+								<button class="page-form__companion-delete">Удалить</button>
+							</div>
+	</script>	
 	<script src="js/main.js"></script>	 	
 </body>
 </html>
