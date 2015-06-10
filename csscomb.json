@@ -1,0 +1,12 @@
+{
+    "remove-empty-rulesets": true,
+    "always-semicolon": true,
+    "color-case": "lower",
+    "block-indent": "  ",
+    "element-case": "lower",
+    "space-after-colon": " ",
+    "space-before-opening-brace": "",
+    "space-after-opening-brace": "\n",
+    "tab-size": true,
+    "vendor-prefix-align": true
+}
