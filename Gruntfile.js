@@ -37,8 +37,8 @@ module.exports = function(grunt) {
     sass: {
       style: {
         files: {
-          'source/css/style.css': 'source/sass/style.scss',
-
+          'build/css/style.css': 'source/sass/style.scss',
+      
         }
       }
     },
