@@ -63,19 +63,24 @@ for (var i = 0; i < elements.length; i++) {
 			if (operation) { 
 				minus.classList.remove("disable");
 				input.value = fieldValue + 1; 
-				if(plus.classList.contains("addRemove")){
-					area.innerHTML = area.innerHTML + template;
+				if(plus.classList.contains("addRemove")){ // extra companion fields adding
+
+					var html = Mustache.render(template, {
+                    	"number": Number(input.value)
+       			 	});
+
+					area.innerHTML += html;
 				}	
 
 
 			} else { 
-				if(fieldValue <= 1){
+				if(fieldValue <= 0){
 					input.value = 0;
 					minus.classList.add("disable");
 				} else{
 			 		input.value = fieldValue - 1; 
-			 		if(minus.classList.contains("addRemove")){
-			 			area.removeChild(companion);
+			 		if(minus.classList.contains("addRemove")){ // extra companion fields adding
+			 			area.removeChild(area.children[area.children.length - 1]);
 			 		}
 				}
 
